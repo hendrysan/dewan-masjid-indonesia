@@ -47,6 +47,8 @@
     <script src="../../cms-assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../../cms-assets/js/config.js"></script>
+
+    @yield('css')
 </head>
 
 <body>
@@ -356,7 +358,34 @@
 
     <!-- Main JS -->
     <script src="../../cms-assets/js/main.js"></script>
+    @yield('js')
 
+    <script>
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+
+                            $('html, body').animate({
+                                scrollTop: $(form.querySelectorAll(':invalid')[0]).offset().top -
+                                    100
+                            }, 500);
+
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
     <!-- Page JS -->
 </body>
 

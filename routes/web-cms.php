@@ -26,4 +26,11 @@ Route::prefix('cms')->group(function () {
     Route::prefix('user')->group(function () {
         Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('cms.users');
     });
+
+    Route::prefix('subdistrict')->group(function () {
+        Route::get('/', [App\Http\Controllers\SubdistrictController::class, 'index'])->name('cms.subdistricts');
+        Route::get('/create', [App\Http\Controllers\SubdistrictController::class, 'create'])->name('cms.subdistricts.create');
+
+        Route::delete('/destroy/{id}', [App\Http\Controllers\SubdistrictController::class, 'destroy'])->name('cms.subdistricts.destroy');
+    });
 });
