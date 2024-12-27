@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Vilage;
 use App\Models\Subdistrict;
 use Yajra\DataTables\Facades\DataTables;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 
-class SubdistrictController extends Controller
+class VilageController extends Controller
 {
     public function __construct()
     {
@@ -22,23 +23,21 @@ class SubdistrictController extends Controller
     {
         if ($request->ajax()) {
             // dd('test');
-            $model = Subdistrict::query();
+            $model = Vilage::query();
 
             return DataTables::eloquent($model)
                 ->addIndexColumn()
                 ->addColumn('action', function ($data) {
-                    $button = '<a href="' . route('cms.subdistricts.edit', $data->id) . '"  class="edit btn btn-primary btn-sm"><span class="fas fa-pencil-alt"></span></a>';
+                    $button = '<a href="' . route('cms.vilages.edit', $data->id) . '"  class="edit btn btn-primary btn-sm"><span class="fas fa-pencil-alt"></span></a>';
                     $button .= '&nbsp;&nbsp;';
                     $button .= '<button type="button" name="delete" data-id="' . $data->id . '" class="delete btn btn-danger btn-sm"><span class="fas fa-trash"></span></button>';
-
-
 
                     return $button;
                 })
                 ->rawColumns(['action'])
                 ->toJson();
         }
-        return view('cms.subdistrict.index');
+        return view('cms.vilage.index');
     }
 
     /**
@@ -46,8 +45,8 @@ class SubdistrictController extends Controller
      */
     public function create()
     {
-        //
-        return view('cms.subdistrict.create');
+        $subdistricts = Subdistrict::all();
+        return view('cms.vilage.create',compact('subdistricts'));
     }
 
     /**
@@ -61,12 +60,13 @@ class SubdistrictController extends Controller
         ]);
 
         // Subdistricts::create($request->all());
-        $subdistrict = new Subdistrict();
-        $subdistrict->name = Str::title($request->name);
-        $subdistrict->save();
-        alert()->success('success', 'Role created successfully');
+        $vilage = new Vilage();
+        $vilage->subdistrict_id = $request->subdistrict_id;
+        $vilage->name = Str::title($request->name);
+        $vilage->save();
+        alert()->success('success', 'Desa created successfully');
 
-        return redirect()->route('cms.subdistricts'); //->with('success', 'Subdistrict created successfully.');
+        return redirect()->route('cms.vilages'); //->with('success', 'Subdistrict created successfully.');
     }
 
     /**
@@ -83,15 +83,15 @@ class SubdistrictController extends Controller
      */
     public function edit($id)
     {
-        $subdistrict = Subdistrict::find($id);
+        $vilage = Vilage::find($id);
 
-        if (!$subdistrict) {
+        if (!$vilage) {
             // alert()->error('error', 'Kecamatan tidak di temukan');
-            Alert::warning('Error', 'Kecamatan tidak di temukan');
-            return redirect()->route('cms.subdistricts');
+            Alert::warning('Error', 'Desa tidak di temukan');
+            return redirect()->route('cms.vilages');
         }
-
-        return view('cms.subdistrict.edit', compact('subdistrict'));
+        $subdistricts = Subdistrict::all();
+        return view('cms.vilage.edit', compact('vilage','subdistricts'));
     }
 
     /**
@@ -100,16 +100,17 @@ class SubdistrictController extends Controller
     public function update(Request $request, $id)
     {
         // dd($request->all());
-        $subdistrict = Subdistrict::find($id);
+        $vilage = Vilage::find($id);
 
-        if (!$subdistrict) {
-            alert()->error('error', 'Kecamatan not found');
-            return redirect()->route('cms.subdistrict.edit', ['id' => $id]);
+        if (!$vilage) {
+            alert()->error('error', 'Desa not found');
+            return redirect()->route('cms.vilage.edit', ['id' => $id]);
         }
-        $subdistrict->name = Str::title($request->name);
-        $subdistrict->save();
+        $vilage->name = Str::title($request->name);
+        $vilage->subdistrict_id = $request->subdistrict_id;
+        $vilage->save();
         alert()->success('success', 'Role updated successfully');
-        return redirect()->route('cms.subdistricts');
+        return redirect()->route('cms.vilages');
     }
 
     /**
@@ -118,22 +119,22 @@ class SubdistrictController extends Controller
     public function destroy(string $id)
     {
         //
-        $subdistrict = Subdistrict::find($id);
+        $vilage = Vilage::find($id);
 
-        if (!$subdistrict) {
-            alert()->error('error', 'Kecamatan not found');
-            return redirect()->route('cms.subdistricts');
+        if (!$vilage) {
+            alert()->error('error', 'Desa not found');
+            return redirect()->route('cms.vilages');
         }
 
-        $subdistrict->delete();
+        $vilage->delete();
 
-        alert()->success('success', 'Role deleted successfully');
-        return response()->json(['success' => 'Role deleted successfully']);
+        alert()->success('success', 'Desa deleted successfully');
+        return response()->json(['success' => 'Desa deleted successfully']);
     }
 
     public function json_request(Request $request)
     {
-        $subdistricts = Subdistrict::all();
-        return response()->json($subdistricts);
+        $vilages = Vilage::all();
+        return response()->json($vilages);
     }
 }

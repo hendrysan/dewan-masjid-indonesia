@@ -37,8 +37,18 @@ Route::prefix('cms')->group(function () {
         Route::put('/update/{id}', [App\Http\Controllers\SubdistrictController::class, 'update'])->name('cms.subdistricts.update');
     });
 
+    Route::prefix('vilage')->group(function () {
+        Route::get('/', [App\Http\Controllers\VilageController::class, 'index'])->name('cms.vilages');
+        Route::get('/create', [App\Http\Controllers\VilageController::class, 'create'])->name('cms.vilages.create');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\VilageController::class, 'destroy'])->name('cms.vilages.destroy');
+
+        Route::post('/store', [App\Http\Controllers\VilageController::class, 'store'])->name('cms.vilages.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\VilageController::class, 'edit'])->name('cms.vilages.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\VilageController::class, 'update'])->name('cms.vilages.update');
+    });
+
     Route::prefix('dropdown')->group(function () {
-        Route::post('/subdistrict', [App\Http\Controllers\SubdistrictController::class, 'json_request'])->name('cms.subdistricts.json');
+        Route::post('/subdistrict', [App\Http\Controllers\VilageController::class, 'json_request'])->name('cms.vilages.json');
     });
 
 });
