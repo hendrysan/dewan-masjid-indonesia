@@ -27,6 +27,16 @@ Route::prefix('cms')->group(function () {
         Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('cms.users');
     });
 
+    Route::prefix('role')->group(function () {
+        Route::get('/', [App\Http\Controllers\RoleController::class, 'index'])->name('cms.roles');
+        Route::get('/create', [App\Http\Controllers\RoleController::class, 'create'])->name('cms.roles.create');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\RoleController::class, 'destroy'])->name('cms.roles.destroy');
+
+        Route::post('/store', [App\Http\Controllers\RoleController::class, 'store'])->name('cms.roles.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\RoleController::class, 'edit'])->name('cms.roles.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\RoleController::class, 'update'])->name('cms.roles.update');
+    });
+
     Route::prefix('subdistrict')->group(function () {
         Route::get('/', [App\Http\Controllers\SubdistrictController::class, 'index'])->name('cms.subdistricts');
         Route::get('/create', [App\Http\Controllers\SubdistrictController::class, 'create'])->name('cms.subdistricts.create');

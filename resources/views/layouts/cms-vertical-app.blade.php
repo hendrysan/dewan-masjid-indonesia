@@ -106,7 +106,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{{route('cms.roles')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-users"></i>
                             <div data-i18n="Role">Role</div>
                         </a>
