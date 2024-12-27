@@ -83,8 +83,8 @@
                         name: 'name'
                     },
                     {
-                        data: 'subdistrict_id',
-                        name: 'Kecamatan'
+                        data: 'subdistrict',
+                        name: 'subdistrict'
                     },
                     {
                         data: 'action',

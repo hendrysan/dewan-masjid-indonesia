@@ -33,13 +33,12 @@
                                 <label for="name" class="form-label">Kecamatan</label> <span
                                     class="text-danger">*</span>
                                 <select class="form-select" id="subdistrict_id" name="subdistrict_id">
+                                    <option value=""> -- Pilih --</option>
                                     @foreach ($subdistricts as $item)
                                     <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
                                         '' }}> {{ $item->name }} </option>
                                     @endforeach
                                 </select>
-                                {{-- <input type="text" class="form-control" id="subdistrict_id" name="subdistrict_id"
-                                    value="{{ old('subdistrict_id') }}" required> --}}
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Please enter your kecamatan.</div>
                             </div>

@@ -27,6 +27,9 @@ class VilageController extends Controller
 
             return DataTables::eloquent($model)
                 ->addIndexColumn()
+                ->addColumn('subdistrict', function ($data) {
+                    return $data->subdistrict->name;
+                })
                 ->addColumn('action', function ($data) {
                     $button = '<a href="' . route('cms.vilages.edit', $data->id) . '"  class="edit btn btn-primary btn-sm"><span class="fas fa-pencil-alt"></span></a>';
                     $button .= '&nbsp;&nbsp;';

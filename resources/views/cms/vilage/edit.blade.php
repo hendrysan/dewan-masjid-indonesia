@@ -35,12 +35,18 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="name" class="form-label">Kecamatan</label> <span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="subdistrict_id" name="subdistrict_id"
-                                    value="{{ $vilage->subdistrict_id }}" required>
+                                <label for="name" class="form-label">Kecamatan</label> <span
+                                    class="text-danger">*</span>
+                                <select class="form-select" id="subdistrict_id" name="subdistrict_id">
+                                    @foreach ($subdistricts as $item)
+                                    <option value="{{ $item->id }}" {{ ( $item->id == $vilage->subdistrict_id) ? 'selected' :
+                                        '' }}> {{ $item->name }} </option>
+                                    @endforeach
+                                </select>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Please enter your kecamatan.</div>
                             </div>
+
 
                             <div class="float-end mt-3">
                                 <a href="{{ route('cms.vilages') }}" class="btn btn-link">Batal</a>
