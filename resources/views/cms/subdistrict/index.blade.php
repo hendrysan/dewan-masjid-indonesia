@@ -23,9 +23,7 @@
 <!-- Content -->
 
 <div class="container-fluid flex-grow-1 container-p-y">
-    <div class="row g-4 mb-4">
 
-    </div>
     <!-- Users List Table -->
     <div class="card">
         <div class="card-header border-bottom">
@@ -46,7 +44,7 @@
 
         </div>
         <div class="card-datatable table-responsive">
-            <table class="datatables-users table">
+            <table class="datatables-basic table">
                 <thead class="border-top">
                     <tr>
                         <th>No</th>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subdistricts;
+use Yajra\DataTables\Facades\DataTables;
+use Alert;
 
 class SubdistrictController extends Controller
 {
@@ -15,10 +17,27 @@ class SubdistrictController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $subdistricts = Subdistricts::all();
-        return view('cms.subdistrict.index',compact('subdistricts'));
+        if ($request->ajax()) {
+            // dd('test');
+            $model = Subdistricts::query();
+
+            return DataTables::eloquent($model)
+                ->addIndexColumn()
+                ->addColumn('action', function ($data) {
+                    $button = '<a href="' . route('cms.subdistricts.edit', $data->id) . '"  class="edit btn btn-primary btn-sm"><span class="fas fa-pencil-alt"></span></a>';
+                    $button .= '&nbsp;&nbsp;';
+                    $button .= '<button type="button" name="delete" data-id="' . $data->id . '" class="delete btn btn-danger btn-sm"><span class="fas fa-trash"></span></button>';
+
+
+
+                    return $button;
+                })
+                ->rawColumns(['action'])
+                ->toJson();
+        }
+        return view('cms.subdistrict.index');
     }
 
     /**
@@ -27,7 +46,7 @@ class SubdistrictController extends Controller
     public function create()
     {
         //
-        return view('cms.kecamatan.create');
+        return view('cms.subdistrict.create');
     }
 
     /**
@@ -36,24 +55,41 @@ class SubdistrictController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        // Subdistricts::create($request->all());
+        $subdistrict = new Subdistricts();
+        $subdistrict->name = $request->name;
+        $subdistrict->save();
+        alert()->success('success', 'Role created successfully');
+
+        return redirect()->route('cms.subdistricts'); //->with('success', 'Subdistrict created successfully.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-        return view('cms.kecamatan.show');
-    }
+    // public function show(string $id)
+    // {
+    //     //
+    //     return view('cms.kecamatan.show');
+    // }
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        //
-        return view('cms.kecamatan.edit');
+        $subdistrict = Subdistricts::find($id);
+
+        if (!$subdistrict) {
+            alert()->error('error', 'Kecamatan tidak di temukan');
+            return redirect()->route('cms.subdistricts');
+        }
+
+        return view('cms.subdistrict.edit', compact('subdistrict'));
     }
 
     /**

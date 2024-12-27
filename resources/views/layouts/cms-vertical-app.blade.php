@@ -1,7 +1,7 @@
 <!doctype html>
 
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-wide" dir="ltr"
-    data-theme="theme-default" data-assets-path="../../cms-assets/" data-template="vertical-menu-template">
+    data-theme="theme-default" data-assets-path="{{ asset('/cms-assets/') }}" data-template="vertical-menu-template">
 
 <head>
     <meta charset="utf-8" />
@@ -13,7 +13,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../cms-assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('/cms-assets/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,31 +23,30 @@
         rel="stylesheet" />
 
     <!-- Icons -->
-    <link rel="stylesheet" href="../../cms-assets/vendor/fonts/fontawesome.css" />
-    <link rel="stylesheet" href="../../cms-assets/vendor/fonts/tabler-icons.css" />
-    <link rel="stylesheet" href="../../cms-assets/vendor/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/fonts/tabler-icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/fonts/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/fonts/flag-icons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../../cms-assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../../cms-assets/vendor/css/rtl/theme-default.css"
-        class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../../cms-assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/css/rtl/core.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/css/rtl/theme-default.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../cms-assets/vendor/libs/node-waves/node-waves.css" />
-    <link rel="stylesheet" href="../../cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../cms-assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="../../cms-assets/vendor/js/helpers.js"></script>
+    <script src="{{ asset('/cms-assets/vendor/js/helpers.js') }}"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../cms-assets/vendor/js/template-customizer.js"></script>
+    <script src="{{ asset('/cms-assets/vendor/js/template-customizer.js') }}"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../../cms-assets/js/config.js"></script>
-
+    <script src="{{ asset('/cms-assets/js/config.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
     @yield('css')
 </head>
 
@@ -112,7 +111,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{{route('cms.subdistricts')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-users"></i>
                             <div data-i18n="Kecamatan">Master Kecamatan</div>
                         </a>
@@ -207,7 +206,7 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="../../cms-assets/img/avatars/1.png" alt
+                                        <img src="{{ asset('/cms-assets/img/avatars/1.png') }}" alt
                                             class="h-auto rounded-circle" />
                                     </div>
                                 </a>
@@ -217,7 +216,7 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="../../cms-assets/img/avatars/1.png" alt
+                                                        <img src="{{ asset('/cms-assets/img/avatars/1.png') }}" alt
                                                             class="h-auto rounded-circle" />
                                                     </div>
                                                 </div>
@@ -280,7 +279,7 @@
                     <!-- Layout Demo -->
                     {{-- <div class="layout-demo-wrapper">
                         <div class="layout-demo-placeholder">
-                            <img src="../../cms-assets/img/layouts/layout-vertical-fluid-light.png" class="img-fluid"
+                            <img src="{{ asset('/cms-assets/img/layouts/layout-vertical-fluid-light.png" class="img-fluid"
                                 alt="Layout fluid" data-app-light-img="layouts/layout-vertical-fluid-light.png"
                                 data-app-dark-img="layouts/layout-vertical-fluid-dark.png" />
                         </div>
@@ -342,22 +341,24 @@
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
 
-    <script src="../../cms-assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../../cms-assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../cms-assets/vendor/js/bootstrap.js"></script>
-    <script src="../../cms-assets/vendor/libs/node-waves/node-waves.js"></script>
-    <script src="../../cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../../cms-assets/vendor/libs/hammer/hammer.js"></script>
-    <script src="../../cms-assets/vendor/libs/i18n/i18n.js"></script>
-    <script src="../../cms-assets/vendor/libs/typeahead-js/typeahead.js"></script>
-    <script src="../../cms-assets/vendor/js/menu.js"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/hammer/hammer.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>>
+    <script src="{{ asset('/cms-assets/vendor/libs/i18n/i18n.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/libs/typeahead-js/typeahead.js') }}"></script>
+    <script src="{{ asset('/cms-assets/vendor/js/menu.js') }}"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>
 
     <!-- Main JS -->
-    <script src="../../cms-assets/js/main.js"></script>
+    <script src="{{ asset('/cms-assets/js/main.js') }}"></script>
     @yield('js')
 
     <script>

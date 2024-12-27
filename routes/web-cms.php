@@ -30,7 +30,10 @@ Route::prefix('cms')->group(function () {
     Route::prefix('subdistrict')->group(function () {
         Route::get('/', [App\Http\Controllers\SubdistrictController::class, 'index'])->name('cms.subdistricts');
         Route::get('/create', [App\Http\Controllers\SubdistrictController::class, 'create'])->name('cms.subdistricts.create');
-
         Route::delete('/destroy/{id}', [App\Http\Controllers\SubdistrictController::class, 'destroy'])->name('cms.subdistricts.destroy');
+
+        Route::post('/store', [App\Http\Controllers\SubdistrictController::class, 'store'])->name('cms.subdistricts.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\SubdistrictController::class, 'edit'])->name('cms.subdistricts.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\SubdistrictController::class, 'update'])->name('cms.subdistricts.update');
     });
 });
