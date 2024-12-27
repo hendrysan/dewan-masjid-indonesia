@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Subdistricts;
+use App\Models\Subdistrict;
 use Yajra\DataTables\Facades\DataTables;
-use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SubdistrictController extends Controller
 {
@@ -21,7 +21,7 @@ class SubdistrictController extends Controller
     {
         if ($request->ajax()) {
             // dd('test');
-            $model = Subdistricts::query();
+            $model = Subdistrict::query();
 
             return DataTables::eloquent($model)
                 ->addIndexColumn()
@@ -60,7 +60,7 @@ class SubdistrictController extends Controller
         ]);
 
         // Subdistricts::create($request->all());
-        $subdistrict = new Subdistricts();
+        $subdistrict = new Subdistrict();
         $subdistrict->name = $request->name;
         $subdistrict->save();
         alert()->success('success', 'Role created successfully');
@@ -80,12 +80,13 @@ class SubdistrictController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        $subdistrict = Subdistricts::find($id);
+        $subdistrict = Subdistrict::find($id);
 
         if (!$subdistrict) {
-            alert()->error('error', 'Kecamatan tidak di temukan');
+            // alert()->error('error', 'Kecamatan tidak di temukan');
+            Alert::warning('Error', 'Kecamatan tidak di temukan');
             return redirect()->route('cms.subdistricts');
         }
 
@@ -95,9 +96,20 @@ class SubdistrictController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+         // dd($request->all());
+         $subdistrict = Subdistrict::find($id);
+
+         if (!$subdistrict) {
+             alert()->error('error', 'Kecamatan not found');
+             return redirect()->route('cms.subdistrict.edit', ['id' => $id]);
+         }
+         $subdistrict->name = $request->name;
+         $subdistrict->save();
+         alert()->success('success', 'Role updated successfully');
+         return redirect()->route('cms.subdistricts');
+
     }
 
     /**
@@ -106,5 +118,16 @@ class SubdistrictController extends Controller
     public function destroy(string $id)
     {
         //
+        $subdistrict = Subdistrict::find($id);
+
+         if (!$subdistrict) {
+             alert()->error('error', 'Kecamatan not found');
+             return redirect()->route('cms.subdistricts');
+         }
+
+         $subdistrict->delete();
+
+         alert()->success('success', 'Role deleted successfully');
+         return response()->json(['success' => 'Role deleted successfully']);
     }
 }

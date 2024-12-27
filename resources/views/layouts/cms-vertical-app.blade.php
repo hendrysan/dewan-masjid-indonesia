@@ -35,7 +35,9 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.css') }}" />
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/assets/vendor/libs/animate-css/animate.css') }}" />
+    {{--
+    <link rel="stylesheet" href="{{ asset('/assets/vendor/libs/sweetalert2/sweetalert2.css') }}" /> --}}
 
     <!-- Page CSS -->
 
@@ -46,7 +48,7 @@
     <script src="{{ asset('/cms-assets/vendor/js/template-customizer.js') }}"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('/cms-assets/js/config.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
+
     @yield('css')
 </head>
 
@@ -264,11 +266,11 @@
                     </div>
 
                     <!-- Search Small Screens -->
-                    <div class="navbar-search-wrapper search-input-wrapper d-none">
+                    {{-- <div class="navbar-search-wrapper search-input-wrapper d-none">
                         <input type="text" class="form-control search-input container-fluid border-0"
                             placeholder="Search..." aria-label="Search..." />
                         <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
-                    </div>
+                    </div> --}}
                 </nav>
 
                 <!-- / Navbar -->
@@ -279,8 +281,9 @@
                     <!-- Layout Demo -->
                     {{-- <div class="layout-demo-wrapper">
                         <div class="layout-demo-placeholder">
-                            <img src="{{ asset('/cms-assets/img/layouts/layout-vertical-fluid-light.png" class="img-fluid"
-                                alt="Layout fluid" data-app-light-img="layouts/layout-vertical-fluid-light.png"
+                            <img src="{{ asset('/cms-assets/img/layouts/layout-vertical-fluid-light.png"
+                                class="img-fluid" alt="Layout fluid"
+                                data-app-light-img="layouts/layout-vertical-fluid-light.png"
                                 data-app-dark-img="layouts/layout-vertical-fluid-dark.png" />
                         </div>
                         <div class="layout-demo-info">
@@ -289,6 +292,7 @@
                         </div>
                     </div> --}}
                     <!--/ Layout Demo -->
+                    @include('sweetalert::alert')
                     @yield('content')
 
 
@@ -347,7 +351,7 @@
     <script src="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/hammer/hammer.js') }}"></script>
-    <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>>
+    {{-- <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>> --}}
     <script src="{{ asset('/cms-assets/vendor/libs/i18n/i18n.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/typeahead-js/typeahead.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/js/menu.js') }}"></script>
@@ -355,8 +359,8 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>
-
+    {{-- <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script> --}}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Main JS -->
     <script src="{{ asset('/cms-assets/js/main.js') }}"></script>
     @yield('js')
