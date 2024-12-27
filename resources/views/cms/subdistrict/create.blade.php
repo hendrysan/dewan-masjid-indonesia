@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Dashboard</h4>
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Kecamatan </span></h4>
 
     <div class="row">
         <!-- Autosize -->
@@ -22,7 +22,7 @@
                             novalidate>
                             @csrf
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label> <span class="text-danger">*</span>
+                                <label for="name" class="form-label">Nama Kecamatan</label> <span class="text-danger">*</span>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
                                     required>
                                 <div class="valid-feedback"></div>

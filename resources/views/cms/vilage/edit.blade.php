@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Dashboard</h4>
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Desa </span> </h4>
 
     <div class="row">
         <!-- Autosize -->
@@ -27,7 +27,7 @@
                             <input type="hidden" name="id" value="{{ $vilage->id }}">
 
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label> <span class="text-danger">*</span>
+                                <label for="name" class="form-label">Nama Desa</label> <span class="text-danger">*</span>
                                 <input type="text" class="form-control" id="name" name="name"
                                     value="{{ $vilage->name }}" required>
                                 <div class="valid-feedback"></div>
@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="name" class="form-label">Kecamatan</label> <span
+                                <label for="name" class="form-label">Pilih Kecamatan</label> <span
                                     class="text-danger">*</span>
                                 <select class="form-select" id="subdistrict_id" name="subdistrict_id">
                                     @foreach ($subdistricts as $item)
