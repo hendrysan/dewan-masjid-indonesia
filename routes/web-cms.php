@@ -36,4 +36,10 @@ Route::prefix('cms')->group(function () {
         Route::get('/edit/{id}', [App\Http\Controllers\SubdistrictController::class, 'edit'])->name('cms.subdistricts.edit');
         Route::put('/update/{id}', [App\Http\Controllers\SubdistrictController::class, 'update'])->name('cms.subdistricts.update');
     });
+
+    Route::prefix('dropdown')->group(function () {
+        Route::post('/subdistrict', [App\Http\Controllers\SubdistrictController::class, 'json_request'])->name('cms.subdistricts.json');
+    });
+
 });
+

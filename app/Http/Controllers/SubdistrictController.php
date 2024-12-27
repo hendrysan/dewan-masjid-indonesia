@@ -11,7 +11,7 @@ class SubdistrictController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('json_request');
     }
 
     /**
@@ -98,18 +98,17 @@ class SubdistrictController extends Controller
      */
     public function update(Request $request, $id)
     {
-         // dd($request->all());
-         $subdistrict = Subdistrict::find($id);
+        // dd($request->all());
+        $subdistrict = Subdistrict::find($id);
 
-         if (!$subdistrict) {
-             alert()->error('error', 'Kecamatan not found');
-             return redirect()->route('cms.subdistrict.edit', ['id' => $id]);
-         }
-         $subdistrict->name = $request->name;
-         $subdistrict->save();
-         alert()->success('success', 'Role updated successfully');
-         return redirect()->route('cms.subdistricts');
-
+        if (!$subdistrict) {
+            alert()->error('error', 'Kecamatan not found');
+            return redirect()->route('cms.subdistrict.edit', ['id' => $id]);
+        }
+        $subdistrict->name = $request->name;
+        $subdistrict->save();
+        alert()->success('success', 'Role updated successfully');
+        return redirect()->route('cms.subdistricts');
     }
 
     /**
@@ -120,14 +119,20 @@ class SubdistrictController extends Controller
         //
         $subdistrict = Subdistrict::find($id);
 
-         if (!$subdistrict) {
-             alert()->error('error', 'Kecamatan not found');
-             return redirect()->route('cms.subdistricts');
-         }
+        if (!$subdistrict) {
+            alert()->error('error', 'Kecamatan not found');
+            return redirect()->route('cms.subdistricts');
+        }
 
-         $subdistrict->delete();
+        $subdistrict->delete();
 
-         alert()->success('success', 'Role deleted successfully');
-         return response()->json(['success' => 'Role deleted successfully']);
+        alert()->success('success', 'Role deleted successfully');
+        return response()->json(['success' => 'Role deleted successfully']);
+    }
+
+    public function json_request(Request $request)
+    {
+        $subdistricts = Subdistrict::all();
+        return response()->json($subdistricts);
     }
 }
