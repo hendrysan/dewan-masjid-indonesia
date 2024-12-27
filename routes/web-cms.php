@@ -23,6 +23,7 @@ Route::prefix('cms')->group(function () {
 
     Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('cms.logout');
 
-
-
+    Route::prefix('user')->group(function () {
+        Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('cms.users');
+    });
 });
