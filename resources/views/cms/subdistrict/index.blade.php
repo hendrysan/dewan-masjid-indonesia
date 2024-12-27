@@ -48,7 +48,7 @@
                 <thead class="border-top">
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
+                        <th>Kecamatan</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

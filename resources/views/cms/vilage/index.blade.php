@@ -30,7 +30,7 @@
 
             <div class="row ">
                 <div class="col-md-3">
-                    <input type="text" id="searchbox" class="form-control" placeholder="&#xF002; Search"
+                    <input type="text" id="searchbox" class="form-control" placeholder="&#xF002; Search Nama Desa"
                         style="font-family:Arial, FontAwesome">
                 </div>
                 <div class="col-md-9 text-end">
@@ -48,7 +48,7 @@
                 <thead class="border-top">
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
+                        <th>Desa</th>
                         <th>Kecamatan</th>
                         <th>Actions</th>
                     </tr>
