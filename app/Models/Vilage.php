@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Vilages extends Model
+class Vilage extends Model
 {
-    //
+    use SoftDeletes;
 }

@@ -9,10 +9,6 @@ class Subdistrict extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = [
-        'name'
-    ];
-
     public function vilages()
     {
         return $this->belongsTo(Vilage::class, 'subdistrict_id', 'id');
