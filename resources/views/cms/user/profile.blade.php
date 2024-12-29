@@ -25,6 +25,7 @@
                             @method('PUT')
                             <input type="hidden" name="source" value="profile">
                             <input type="hidden" name="id" value="{{  auth()->user()->id }}">
+                            <input type="hidden" name="role_id" value="{{  auth()->user()->role_id }}">
 
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama User</label> <span
@@ -54,17 +55,10 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="name" class="form-label">Pilih Role</label> <span
-                                    class="text-danger">*</span>
-                                <select class="form-select" id="role_id" name="role_id">
-                                    @foreach ($roles as $item)
-                                    <option value="{{ $item->id }}" {{ ( $item->id == auth()->user()->role_id) ?
-                                        'selected' :
-                                        '' }}> {{ $item->name }} </option>
-                                    @endforeach
-                                </select>
-                                <div class="valid-feedback"></div>
-                                <div class="invalid-feedback">Please enter your role.</div>
+                                <label for="name" class="form-label">Role</label> <span class="text-danger">*</span>
+                                <input type="text" class="form-control" id="role_name" name="role_name"
+                                    value="{{ auth()->user()->role->name }}" disabled>
+
                             </div>
 
 

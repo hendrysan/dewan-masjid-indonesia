@@ -122,12 +122,12 @@
                         </a>
                     </li>
 
-                    <li class="menu-item">
+                    {{-- <li class="menu-item">
                         <a href="{{route('cms.roles')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-users"></i>
                             <div data-i18n="Role">Role</div>
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li class="menu-item">
                         <a href="{{route('cms.subdistricts')}}" class="menu-link">
@@ -252,12 +252,12 @@
                                             <span class="align-middle">My Profile</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a class="dropdown-item" href="#">
                                             <i class="ti ti-settings me-2 ti-sm"></i>
                                             <span class="align-middle">Settings</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <div class="dropdown-divider"></div>
                                     </li>
