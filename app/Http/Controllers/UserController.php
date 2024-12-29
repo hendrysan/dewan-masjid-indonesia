@@ -83,6 +83,12 @@ class UserController extends Controller
         //
     }
 
+    public function profile()
+    {
+        $roles = Role::all();
+        return view('cms.user.profile', compact('roles'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -119,6 +125,10 @@ class UserController extends Controller
         }
         $user->save();
         alert()->success('success', 'User berhasil di ubah');
+
+        if ($request->source == "profile") {
+            return redirect()->route('cms.users.profile');
+        }
         return redirect()->route('cms.users');
     }
 

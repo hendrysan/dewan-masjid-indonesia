@@ -26,6 +26,8 @@ Route::prefix('cms')->group(function () {
     Route::prefix('user')->group(function () {
         Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('cms.users');
 
+        Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('cms.users.profile');
+
         Route::get('/create', [App\Http\Controllers\UserController::class, 'create'])->name('cms.users.create');
         Route::delete('/destroy/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('cms.users.destroy');
 
