@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Masjid;
+use App\Models\Subdistrict;
+use App\Models\Vilage;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 
@@ -25,12 +27,12 @@ class MasjidController extends Controller
             return DataTables::eloquent($model)
                 ->addIndexColumn()
                 ->addColumn('desa', function ($data) {
-                    // return $data->subdistrict->name;
-                    return "";
+                    return $data->vilage->name;
+                    // return "";
                 })
                 ->addColumn('kecamatan', function ($data) {
-                    // return $data->subdistrict->name;
-                    return "";
+                    return $data->subdistrict->name;
+                    // return "";
                 })
                 ->addColumn('action', function ($data) {
                     $button = '<a href="' . route('cms.masjids.edit', $data->id) . '"  class="edit btn btn-primary btn-sm"><span class="fas fa-pencil-alt"></span></a>';
@@ -50,8 +52,8 @@ class MasjidController extends Controller
      */
     public function create()
     {
-        //
-        return view('cms.masjid.create');
+        $subdistricts = Subdistrict::all();
+        return view('cms.masjid.create',compact('subdistricts'));
     }
 
     /**

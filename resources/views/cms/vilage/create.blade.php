@@ -3,7 +3,7 @@
 @section('title', 'Page 2')
 
 @section('css')
-
+<link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/select2/select2.css') }}" />
 @endsection
 
 
@@ -22,7 +22,8 @@
                             novalidate>
                             @csrf
                             <div class="mb-3">
-                                <label for="name" class="form-label">Nama Desa</label> <span class="text-danger">*</span>
+                                <label for="name" class="form-label">Nama Desa</label> <span
+                                    class="text-danger">*</span>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
                                     required>
                                 <div class="valid-feedback"></div>
@@ -32,7 +33,8 @@
                             <div class="mb-3">
                                 <label for="name" class="form-label">Pilih Kecamatan</label> <span
                                     class="text-danger">*</span>
-                                <select class="form-select" id="subdistrict_id" name="subdistrict_id">
+                                <select class="select2 form-select" data-style="btn-default" data-live-search="true"
+                                    id="subdistrict_id" name="subdistrict_id" required>
                                     <option value=""> -- Pilih --</option>
                                     @foreach ($subdistricts as $item)
                                     <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
@@ -56,4 +58,15 @@
     </div>
 </div>
 
+@endsection
+
+@section('js')
+<script src="{{ asset('/cms-assets/vendor/libs/select2/select2.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2();
+        // $('#article_category_id').select2();
+
+    });
+</script>
 @endsection
