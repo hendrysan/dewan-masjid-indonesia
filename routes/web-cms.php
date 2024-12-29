@@ -25,6 +25,13 @@ Route::prefix('cms')->group(function () {
 
     Route::prefix('user')->group(function () {
         Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('cms.users');
+
+        Route::get('/create', [App\Http\Controllers\UserController::class, 'create'])->name('cms.users.create');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('cms.users.destroy');
+
+        Route::post('/store', [App\Http\Controllers\UserController::class, 'store'])->name('cms.users.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('cms.users.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('cms.users.update');
     });
 
     Route::prefix('role')->group(function () {

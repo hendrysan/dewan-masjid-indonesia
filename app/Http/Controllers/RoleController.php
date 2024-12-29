@@ -59,13 +59,12 @@ class RoleController extends Controller
             'name' => 'required|string|max:255',
         ]);
 
-        // Subdistricts::create($request->all());
         $role = new Role();
         $role->name = Str::title($request->name);
         $role->save();
-        // alert()->success('success', 'Role created successfully');
+        alert()->success('success', 'Role berhasil di tambahkan');
 
-        return redirect()->route('cms.roles'); //->with('success', 'Subdistrict created successfully.');
+        return redirect()->route('cms.roles');
     }
 
     /**
@@ -85,8 +84,7 @@ class RoleController extends Controller
         $role = Role::find($id);
 
         if (!$role) {
-            // alert()->error('error', 'Kecamatan tidak di temukan');
-            // Alert::warning('Error', 'Role tidak di temukan');
+            alert()->error('error', 'Role tidak di temukan');
             return redirect()->route('cms.roles');
         }
 
@@ -102,12 +100,12 @@ class RoleController extends Controller
         $role = Role::find($id);
 
         if (!$role) {
-            // alert()->error('error', 'Kecamatan not found');
+            alert()->error('error', 'Role tidak di temukan');
             return redirect()->route('cms.role.edit', ['id' => $id]);
         }
         $role->name = Str::title($request->name);
         $role->save();
-        // alert()->success('success', 'Role updated successfully');
+        alert()->success('success', 'Role berhasil di ubah');
         return redirect()->route('cms.roles');
     }
 
@@ -120,14 +118,14 @@ class RoleController extends Controller
         $role = Role::find($id);
 
         if (!$role) {
-            // alert()->error('error', 'Kecamatan not found');
+            alert()->error('error', 'Role not found');
             return redirect()->route('cms.roles');
         }
 
         $role->delete();
 
-        // alert()->success('success', 'Role deleted successfully');
-        return response()->json(['success' => 'Role deleted successfully']);
+        alert()->success('success', 'Role berhasil di hapus');
+        return response()->json(['success' => 'Role berhasil di hapus']);
     }
 
     public function json_request(Request $request)

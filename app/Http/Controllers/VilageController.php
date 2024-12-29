@@ -21,7 +21,6 @@ class VilageController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            // dd('test');
             $model = Vilage::query();
 
             return DataTables::eloquent($model)
@@ -61,12 +60,11 @@ class VilageController extends Controller
             'name' => 'required|string|max:255',
         ]);
 
-        // Subdistricts::create($request->all());
         $vilage = new Vilage();
         $vilage->subdistrict_id = $request->subdistrict_id;
         $vilage->name = Str::title($request->name);
         $vilage->save();
-        // alert()->success('success', 'Desa created successfully');
+        alert()->success('success', 'Desa berhasil di tambahkan');
 
         return redirect()->route('cms.vilages'); //->with('success', 'Subdistrict created successfully.');
     }
@@ -88,8 +86,7 @@ class VilageController extends Controller
         $vilage = Vilage::find($id);
 
         if (!$vilage) {
-            // alert()->error('error', 'Kecamatan tidak di temukan');
-            // Alert::warning('Error', 'Desa tidak di temukan');
+            alert()->error('error', 'Desa tidak di temukan');
             return redirect()->route('cms.vilages');
         }
         $subdistricts = Subdistrict::all();
@@ -101,11 +98,10 @@ class VilageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         $vilage = Vilage::find($id);
 
         if (!$vilage) {
-            // alert()->error('error', 'Desa not found');
+            alert()->error('error', 'Desa tidak di temukan');
             return redirect()->route('cms.vilage.edit', ['id' => $id]);
         }
         $vilage->name = Str::title($request->name);
@@ -124,14 +120,14 @@ class VilageController extends Controller
         $vilage = Vilage::find($id);
 
         if (!$vilage) {
-            // alert()->error('error', 'Desa not found');
+            alert()->error('error', 'Desa tidak di temukan');
             return redirect()->route('cms.vilages');
         }
 
         $vilage->delete();
 
-        // alert()->success('success', 'Desa deleted successfully');
-        return response()->json(['success' => 'Desa deleted successfully']);
+        alert()->success('success', 'Desa berhasi di hapus');
+        return response()->json(['success' => 'Desa berhasi di hapus']);
     }
 
     public function json_request(Request $request)

@@ -59,13 +59,12 @@ class SubdistrictController extends Controller
             'name' => 'required|string|max:255',
         ]);
 
-        // Subdistricts::create($request->all());
         $subdistrict = new Subdistrict();
         $subdistrict->name = Str::title($request->name);
         $subdistrict->save();
-        // alert()->success('success', 'Role created successfully');
+        alert()->success('success', 'Kecamatan berhasil di tambahkan');
 
-        return redirect()->route('cms.subdistricts'); //->with('success', 'Subdistrict created successfully.');
+        return redirect()->route('cms.subdistricts');
     }
 
     /**
@@ -85,8 +84,7 @@ class SubdistrictController extends Controller
         $subdistrict = Subdistrict::find($id);
 
         if (!$subdistrict) {
-            // alert()->error('error', 'Kecamatan tidak di temukan');
-            // Alert::warning('Error', 'Kecamatan tidak di temukan');
+            alert()->error('error', 'Kecamatan tidak di temukan');
             return redirect()->route('cms.subdistricts');
         }
 
@@ -98,16 +96,15 @@ class SubdistrictController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         $subdistrict = Subdistrict::find($id);
 
         if (!$subdistrict) {
-            // alert()->error('error', 'Kecamatan not found');
+            alert()->error('error', 'Kecamatan tidak di temukan');
             return redirect()->route('cms.subdistrict.edit', ['id' => $id]);
         }
         $subdistrict->name = Str::title($request->name);
         $subdistrict->save();
-        // alert()->success('success', 'Role updated successfully');
+        alert()->success('success', 'Kecamatan berhasil di ubah');
         return redirect()->route('cms.subdistricts');
     }
 
@@ -120,14 +117,14 @@ class SubdistrictController extends Controller
         $subdistrict = Subdistrict::find($id);
 
         if (!$subdistrict) {
-            // alert()->error('error', 'Kecamatan not found');
+            alert()->error('error', 'Kecamatan tidak di temukan');
             return redirect()->route('cms.subdistricts');
         }
 
         $subdistrict->delete();
 
-        // alert()->success('success', 'Role deleted successfully');
-        return response()->json(['success' => 'Role deleted successfully']);
+        alert()->success('success', 'Kecamatan berhasil di hapus');
+        return response()->json(['success' => 'Kecamatan berhasil di hapus']);
     }
 
     public function json_request(Request $request)
