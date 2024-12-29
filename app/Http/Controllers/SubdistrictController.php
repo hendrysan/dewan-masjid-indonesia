@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Subdistrict;
 use Yajra\DataTables\Facades\DataTables;
-use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 
 class SubdistrictController extends Controller
@@ -64,7 +63,7 @@ class SubdistrictController extends Controller
         $subdistrict = new Subdistrict();
         $subdistrict->name = Str::title($request->name);
         $subdistrict->save();
-        alert()->success('success', 'Role created successfully');
+        // alert()->success('success', 'Role created successfully');
 
         return redirect()->route('cms.subdistricts'); //->with('success', 'Subdistrict created successfully.');
     }
@@ -87,7 +86,7 @@ class SubdistrictController extends Controller
 
         if (!$subdistrict) {
             // alert()->error('error', 'Kecamatan tidak di temukan');
-            Alert::warning('Error', 'Kecamatan tidak di temukan');
+            // Alert::warning('Error', 'Kecamatan tidak di temukan');
             return redirect()->route('cms.subdistricts');
         }
 
@@ -103,12 +102,12 @@ class SubdistrictController extends Controller
         $subdistrict = Subdistrict::find($id);
 
         if (!$subdistrict) {
-            alert()->error('error', 'Kecamatan not found');
+            // alert()->error('error', 'Kecamatan not found');
             return redirect()->route('cms.subdistrict.edit', ['id' => $id]);
         }
         $subdistrict->name = Str::title($request->name);
         $subdistrict->save();
-        alert()->success('success', 'Role updated successfully');
+        // alert()->success('success', 'Role updated successfully');
         return redirect()->route('cms.subdistricts');
     }
 
@@ -121,13 +120,13 @@ class SubdistrictController extends Controller
         $subdistrict = Subdistrict::find($id);
 
         if (!$subdistrict) {
-            alert()->error('error', 'Kecamatan not found');
+            // alert()->error('error', 'Kecamatan not found');
             return redirect()->route('cms.subdistricts');
         }
 
         $subdistrict->delete();
 
-        alert()->success('success', 'Role deleted successfully');
+        // alert()->success('success', 'Role deleted successfully');
         return response()->json(['success' => 'Role deleted successfully']);
     }
 

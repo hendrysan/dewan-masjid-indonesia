@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Vilage;
 use App\Models\Subdistrict;
 use Yajra\DataTables\Facades\DataTables;
-use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 
 class VilageController extends Controller
@@ -67,7 +66,7 @@ class VilageController extends Controller
         $vilage->subdistrict_id = $request->subdistrict_id;
         $vilage->name = Str::title($request->name);
         $vilage->save();
-        alert()->success('success', 'Desa created successfully');
+        // alert()->success('success', 'Desa created successfully');
 
         return redirect()->route('cms.vilages'); //->with('success', 'Subdistrict created successfully.');
     }
@@ -90,7 +89,7 @@ class VilageController extends Controller
 
         if (!$vilage) {
             // alert()->error('error', 'Kecamatan tidak di temukan');
-            Alert::warning('Error', 'Desa tidak di temukan');
+            // Alert::warning('Error', 'Desa tidak di temukan');
             return redirect()->route('cms.vilages');
         }
         $subdistricts = Subdistrict::all();
@@ -106,13 +105,13 @@ class VilageController extends Controller
         $vilage = Vilage::find($id);
 
         if (!$vilage) {
-            alert()->error('error', 'Desa not found');
+            // alert()->error('error', 'Desa not found');
             return redirect()->route('cms.vilage.edit', ['id' => $id]);
         }
         $vilage->name = Str::title($request->name);
         $vilage->subdistrict_id = $request->subdistrict_id;
         $vilage->save();
-        alert()->success('success', 'Role updated successfully');
+        alert()->success('success', 'Desa berhasil di ubah');
         return redirect()->route('cms.vilages');
     }
 
@@ -125,13 +124,13 @@ class VilageController extends Controller
         $vilage = Vilage::find($id);
 
         if (!$vilage) {
-            alert()->error('error', 'Desa not found');
+            // alert()->error('error', 'Desa not found');
             return redirect()->route('cms.vilages');
         }
 
         $vilage->delete();
 
-        alert()->success('success', 'Desa deleted successfully');
+        // alert()->success('success', 'Desa deleted successfully');
         return response()->json(['success' => 'Desa deleted successfully']);
     }
 

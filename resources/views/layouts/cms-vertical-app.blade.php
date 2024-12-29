@@ -36,8 +36,7 @@
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.css') }}" />
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('/assets/vendor/libs/animate-css/animate.css') }}" />
-    {{--
-    <link rel="stylesheet" href="{{ asset('/assets/vendor/libs/sweetalert2/sweetalert2.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
 
     <!-- Page CSS -->
 
@@ -53,6 +52,7 @@
 </head>
 
 <body>
+    @include('alert')
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -155,6 +155,7 @@
                     </li>
                 </ul>
             </aside>
+            @include('sweetalert::alert')
             <!-- / Menu -->
 
             <!-- Layout container -->
@@ -292,12 +293,12 @@
                         </div>
                     </div> --}}
                     <!--/ Layout Demo -->
-                    @include('sweetalert::alert')
+
                     @yield('content')
 
 
                     <!-- Footer -->
-                    <footer class="content-footer footer bg-footer-theme">
+                    {{-- <footer class="content-footer footer bg-footer-theme">
                         <div class="container-fluid">
                             <div
                                 class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
@@ -324,7 +325,7 @@
                                 </div>
                             </div>
                         </div>
-                    </footer>
+                    </footer> --}}
                     <!-- / Footer -->
 
                     <div class="content-backdrop fade"></div>
@@ -351,7 +352,7 @@
     <script src="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/hammer/hammer.js') }}"></script>
-    {{-- <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>> --}}
+    <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/i18n/i18n.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/libs/typeahead-js/typeahead.js') }}"></script>
     <script src="{{ asset('/cms-assets/vendor/js/menu.js') }}"></script>
@@ -359,8 +360,7 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    {{-- <script src="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.js') }}"></script> --}}
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Main JS -->
     <script src="{{ asset('/cms-assets/js/main.js') }}"></script>
     @yield('js')

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use Yajra\DataTables\Facades\DataTables;
-use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 
 class RoleController extends Controller
@@ -64,7 +63,7 @@ class RoleController extends Controller
         $role = new Role();
         $role->name = Str::title($request->name);
         $role->save();
-        alert()->success('success', 'Role created successfully');
+        // alert()->success('success', 'Role created successfully');
 
         return redirect()->route('cms.roles'); //->with('success', 'Subdistrict created successfully.');
     }
@@ -87,7 +86,7 @@ class RoleController extends Controller
 
         if (!$role) {
             // alert()->error('error', 'Kecamatan tidak di temukan');
-            Alert::warning('Error', 'Role tidak di temukan');
+            // Alert::warning('Error', 'Role tidak di temukan');
             return redirect()->route('cms.roles');
         }
 
@@ -103,12 +102,12 @@ class RoleController extends Controller
         $role = Role::find($id);
 
         if (!$role) {
-            alert()->error('error', 'Kecamatan not found');
+            // alert()->error('error', 'Kecamatan not found');
             return redirect()->route('cms.role.edit', ['id' => $id]);
         }
         $role->name = Str::title($request->name);
         $role->save();
-        alert()->success('success', 'Role updated successfully');
+        // alert()->success('success', 'Role updated successfully');
         return redirect()->route('cms.roles');
     }
 
@@ -121,13 +120,13 @@ class RoleController extends Controller
         $role = Role::find($id);
 
         if (!$role) {
-            alert()->error('error', 'Kecamatan not found');
+            // alert()->error('error', 'Kecamatan not found');
             return redirect()->route('cms.roles');
         }
 
         $role->delete();
 
-        alert()->success('success', 'Role deleted successfully');
+        // alert()->success('success', 'Role deleted successfully');
         return response()->json(['success' => 'Role deleted successfully']);
     }
 
