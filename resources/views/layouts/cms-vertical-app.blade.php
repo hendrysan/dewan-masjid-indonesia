@@ -48,6 +48,23 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('/cms-assets/js/config.js') }}"></script>
 
+    <style>
+        [data-letters]:before {
+            content: attr(data-letters);
+            display: inline-block;
+            font-size: 1em;
+            width: 2.5em;
+            height: 2.5em;
+            line-height: 2.5em;
+            text-align: center;
+            border-radius: 50%;
+            background: gray;
+            vertical-align: middle;
+            margin-right: 1em;
+            color: white;
+        }
+    </style>
+
     @yield('css')
 </head>
 
@@ -208,24 +225,20 @@
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
-                                    <div class="avatar avatar-online">
-                                        <img src="{{ asset('/cms-assets/img/avatars/1.png') }}" alt
-                                            class="h-auto rounded-circle" />
+                                    <div class="avatar avatar-online" data-letters="{{ Auth::user()->initials }}">
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li>
-                                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                                        <a class="dropdown-item" href="#">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="avatar avatar-online">
-                                                        <img src="{{ asset('/cms-assets/img/avatars/1.png') }}" alt
-                                                            class="h-auto rounded-circle" />
+                                                    <div class="avatar avatar-online" data-letters="{{ Auth::user()->initials }}">
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-medium d-block">John Doe</span>
-                                                    <small class="text-muted">Admin</small>
+                                                    <span class="fw-medium d-block">{{ auth()->user()->name }}</span>
+                                                    <small class="text-muted">{{ auth()->user()->role->name }}</small>
                                                 </div>
                                             </div>
                                         </a>
@@ -234,13 +247,13 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="pages-profile-user.html">
+                                        <a class="dropdown-item" href="#">
                                             <i class="ti ti-user-check me-2 ti-sm"></i>
                                             <span class="align-middle">My Profile</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                                        <a class="dropdown-item" href="#">
                                             <i class="ti ti-settings me-2 ti-sm"></i>
                                             <span class="align-middle">Settings</span>
                                         </a>
