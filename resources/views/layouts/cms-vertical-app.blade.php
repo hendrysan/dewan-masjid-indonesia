@@ -35,7 +35,11 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/node-waves/node-waves.css') }}" />
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/assets/vendor/libs/animate-css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/animate-css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/typeahead-js/typeahead.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/quill/katex.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/quill/editor.css') }}" /> --}}
+
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
 
     <!-- Page CSS -->
@@ -115,12 +119,40 @@
                         </a>
                     </li>
 
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Master Data</span>
+                    </li>
                     <li class="menu-item">
                         <a href="{{route('cms.users')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-users"></i>
                             <div data-i18n="Users">User</div>
                         </a>
                     </li>
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons ti ti-map"></i>
+                            <div>Wilayah</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{route('cms.subdistricts')}}" class="menu-link">
+
+                                    <div data-i18n="Kecamatan">Master Kecamatan</div>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="{{route('cms.vilages')}}" class="menu-link">
+
+                                    <div data-i18n="Desa">Master Desa</div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
 
                     {{-- <li class="menu-item">
                         <a href="{{route('cms.roles')}}" class="menu-link">
@@ -129,19 +161,7 @@
                         </a>
                     </li> --}}
 
-                    <li class="menu-item">
-                        <a href="{{route('cms.subdistricts')}}" class="menu-link">
-                            <i class="menu-icon tf-icons ti ti-users"></i>
-                            <div data-i18n="Kecamatan">Master Kecamatan</div>
-                        </a>
-                    </li>
 
-                    <li class="menu-item">
-                        <a href="{{route('cms.vilages')}}" class="menu-link">
-                            <i class="menu-icon tf-icons ti ti-users"></i>
-                            <div data-i18n="Desa">Master Desa</div>
-                        </a>
-                    </li>
 
                     <li class="menu-item">
                         <a href="#" class="menu-link">
@@ -233,7 +253,8 @@
                                         <a class="dropdown-item" href="#">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="avatar avatar-online" data-letters="{{ Auth::user()->initials }}">
+                                                    <div class="avatar avatar-online"
+                                                        data-letters="{{ Auth::user()->initials }}">
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
@@ -375,7 +396,7 @@
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    {{-- <script src="{{ asset('/cms-assets/js/main.js') }}"></script> --}}
+    <script src="{{ asset('/cms-assets/js/main.js') }}"></script>
     @yield('js')
 
     <script>
