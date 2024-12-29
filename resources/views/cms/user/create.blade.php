@@ -30,11 +30,27 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="name" class="form-label">Email User</label> <span class="text-danger">*</span>
+                                <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
+                                    required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Please enter your email.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Password</label> <span class="text-danger">*</span>
+                                <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}"
+                                    required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Please enter your password.</div>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="name" class="form-label">Pilih Role</label> <span
                                     class="text-danger">*</span>
                                 <select class="form-select" id="role_id" name="role_id">
                                     <option value=""> -- Pilih --</option>
-                                    @foreach ($users as $item)
+                                    @foreach ($roles as $item)
                                     <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
                                         '' }}> {{ $item->name }} </option>
                                     @endforeach
@@ -44,7 +60,7 @@
                             </div>
 
                             <div class="float-end mt-3">
-                                <a href="{{ route('cms.vilages') }}" class="btn btn-link">Batal</a>
+                                <a href="{{ route('cms.users') }}" class="btn btn-link">Batal</a>
                                 <button type="submit" class="btn btn-primary">Kirim</button>
                             </div>
                         </form>

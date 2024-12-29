@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Role;
+use App\Models\User;
+use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -35,10 +39,10 @@ class UserController extends Controller
                 ->rawColumns(['action'])
                 ->toJson();
         }
-        $total_user = 0;
-        $total_administrator = 1;
-        $total_verifikator = 2;
-        $total_operator = 2;
+        $total_user = User::count();
+        $total_administrator = User::where('role_id', '=', 1)->count();
+        $total_verifikator = User::where('role_id', '=', 2)->count();;
+        $total_operator = User::where('role_id', '=', 3)->count();;
         return view('cms.user.index', compact('total_user', 'total_administrator', 'total_verifikator', 'total_operator'));
     }
 
@@ -48,7 +52,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::all();
-        return view('cms.role.create', compact('roles'));
+        return view('cms.user.create', compact('roles'));
     }
 
     /**
@@ -60,8 +64,8 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
         ]);
 
-        $user = new Vilage();
-        $user->role_id = $request->subdistrict_id;
+        $user = new User();
+        $user->role_id = $request->role_id;
         $user->name = Str::title($request->name);
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
@@ -100,13 +104,13 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $user = Vilage::find($id);
+        $user = User::find($id);
 
         if (!$user) {
             alert()->error('error', 'User tidak di temukan');
             return redirect()->route('cms.user.edit', ['id' => $id]);
         }
-        $user->role_id = $request->subdistrict_id;
+        $user->role_id = $request->role_id;
         $user->name = Str::title($request->name);
         $user->email = $request->email;
 

@@ -3,7 +3,19 @@
 @section('title', 'Page 2')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}" />
+<link rel="stylesheet"
+    href="{{ asset('/cms-assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}" />
+<link rel="stylesheet"
+    href="{{ asset('/cms-assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css') }}" />
+<link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css') }}" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
+<style>
+    .dataTables_filter {
+        display: none;
+    }
+</style>
 @endsection
 
 
