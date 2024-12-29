@@ -173,14 +173,14 @@
                     </li> --}}
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{{route('cms.beritas')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-news"></i>
                             <div data-i18n="Berita">Berita</div>
                         </a>
                     </li>
 
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{{route('cms.taushiyahs')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-news"></i>
                             <div data-i18n="Taushiyah">Taushiyah</div>
                         </a>

@@ -76,6 +76,26 @@ Route::prefix('cms')->group(function () {
         Route::put('/update/{id}', [App\Http\Controllers\MasjidController::class, 'update'])->name('cms.masjids.update');
     });
 
+    Route::prefix('berita')->group(function () {
+        Route::get('/', [App\Http\Controllers\BeritaController::class, 'index'])->name('cms.beritas');
+        Route::get('/create', [App\Http\Controllers\BeritaController::class, 'create'])->name('cms.beritas.create');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\BeritaController::class, 'destroy'])->name('cms.beritas.destroy');
+
+        Route::post('/store', [App\Http\Controllers\BeritaController::class, 'store'])->name('cms.beritas.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\BeritaController::class, 'edit'])->name('cms.beritas.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\BeritaController::class, 'update'])->name('cms.beritas.update');
+    });
+
+    Route::prefix('taushiyah')->group(function () {
+        Route::get('/', [App\Http\Controllers\TaushiyahController::class, 'index'])->name('cms.taushiyahs');
+        Route::get('/create', [App\Http\Controllers\TaushiyahController::class, 'create'])->name('cms.taushiyahs.create');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\TaushiyahController::class, 'destroy'])->name('cms.taushiyahs.destroy');
+
+        Route::post('/store', [App\Http\Controllers\TaushiyahController::class, 'store'])->name('cms.taushiyahs.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\TaushiyahController::class, 'edit'])->name('cms.taushiyahs.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\TaushiyahController::class, 'update'])->name('cms.taushiyahs.update');
+    });
+
     Route::prefix('dropdown')->group(function () {
         Route::post('/subdistrict', [App\Http\Controllers\VilageController::class, 'json_request'])->name('cms.vilages.json');
     });
