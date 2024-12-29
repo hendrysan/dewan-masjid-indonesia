@@ -48,7 +48,7 @@
                 <thead class="border-top">
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
+                        <th>Judul</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -78,12 +78,8 @@
                         searchable: false
                     },
                     {
-                        data: 'name',
-                        name: 'name'
-                    },
-                    {
-                        data: 'alamat',
-                        name: 'alamat'
+                        data: 'judul',
+                        name: 'judul'
                     },
                     {
                         data: 'action',

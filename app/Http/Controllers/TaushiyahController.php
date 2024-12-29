@@ -29,8 +29,6 @@ class TaushiyahController extends Controller
                     $button .= '&nbsp;&nbsp;';
                     $button .= '<button type="button" name="delete" data-id="' . $data->id . '" class="delete btn btn-danger btn-sm"><span class="fas fa-trash"></span></button>';
 
-
-
                     return $button;
                 })
                 ->rawColumns(['action'])
