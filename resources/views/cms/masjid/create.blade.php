@@ -35,19 +35,20 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="name" class="form-label">Pilih Kecamatan</label> <span
+                                <label for="name" class="form-label">Pilih Desa</label> <span
                                     class="text-danger">*</span>
                                 <select class="select2 form-select" data-style="btn-default" data-live-search="true"
                                     id="subdistrict_id" name="subdistrict_id" required>
                                     <option value=""> -- Pilih --</option>
-                                    @foreach ($subdistricts as $item)
+                                    @foreach ($vilages as $item)
                                     <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
-                                        '' }}> {{ $item->name }} </option>
+                                        '' }}> {{ $item->name }} ({{ $item->subdistrict->name }}) </option>
                                     @endforeach
                                 </select>
                                 <div class="valid-feedback"></div>
-                                <div class="invalid-feedback">Please enter your kecamatan.</div>
+                                <div class="invalid-feedback">Please enter your desa.</div>
                             </div>
+
 
                             <div class="float-end mt-3">
                                 <a href="{{ route('cms.masjids') }}" class="btn btn-link">Batal</a>
@@ -69,7 +70,33 @@
 <script>
     $(document).ready(function() {
         $('#subdistrict_id').select2();
-        // $('#article_category_id').select2();
+
+        $('#subdistrict_id').change(function(){
+            $('#vilage_id').prop('disabled',false);
+            // const _body = {
+            //     "_token": "{{ csrf_token() }}",
+            //     subdistrict_id = $(this).val();
+            // }
+            var _url = "{{route('cms.vilages.select2.dropdown')}}";
+            $('#vilage_id').select2({
+                ajax: {
+                    url: _url,
+                    type: 'POST',
+                    dataType: 'json',
+                    // data: {
+                    //     "_token": "{{ csrf_token() }}",
+                    //     subdistrict_id = $(this).val();
+                    // },
+                    processResults: function (data) {
+                    // Transforms the top-level key of the response object from 'items' to 'results'
+                    return {
+                        results: data
+                    };
+                    }
+                }
+            });
+        });
+
 
     });
 </script>

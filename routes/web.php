@@ -12,3 +12,4 @@ Route::get('/', [App\Http\Controllers\LandingController::class, 'index'])->name(
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 require('web-cms.php');
+require('api.php');

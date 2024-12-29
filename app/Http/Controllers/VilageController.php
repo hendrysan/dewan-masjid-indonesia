@@ -12,7 +12,7 @@ class VilageController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('json_request');
+        $this->middleware('auth');
     }
 
     /**
@@ -47,7 +47,7 @@ class VilageController extends Controller
     public function create()
     {
         $subdistricts = Subdistrict::all();
-        return view('cms.vilage.create',compact('subdistricts'));
+        return view('cms.vilage.create', compact('subdistricts'));
     }
 
     /**
@@ -90,7 +90,7 @@ class VilageController extends Controller
             return redirect()->route('cms.vilages');
         }
         $subdistricts = Subdistrict::all();
-        return view('cms.vilage.edit', compact('vilage','subdistricts'));
+        return view('cms.vilage.edit', compact('vilage', 'subdistricts'));
     }
 
     /**
@@ -130,9 +130,14 @@ class VilageController extends Controller
         return response()->json(['success' => 'Desa berhasi di hapus']);
     }
 
-    public function json_request(Request $request)
+    public function select2_dropdown(string $id)
     {
-        $vilages = Vilage::all();
+        // $subdistrict_id = (int)$request->subdistrict_id;
+        $vilages = Vilage::select('id AS id', 'name AS text')
+            ->where('subdistrict_id', $id)
+            ->get();
+
+
         return response()->json($vilages);
     }
 }

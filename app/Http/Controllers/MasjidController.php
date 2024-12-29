@@ -52,8 +52,8 @@ class MasjidController extends Controller
      */
     public function create()
     {
-        $subdistricts = Subdistrict::all();
-        return view('cms.masjid.create',compact('subdistricts'));
+        $vilages = Vilage::all();
+        return view('cms.masjid.create',compact('vilages'));
     }
 
     /**

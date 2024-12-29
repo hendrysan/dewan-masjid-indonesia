@@ -1,0 +1,6 @@
+<?
+
+class Select2DropdownResponse
+{
+
+}

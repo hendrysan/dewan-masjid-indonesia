@@ -64,6 +64,8 @@ Route::prefix('cms')->group(function () {
         Route::post('/store', [App\Http\Controllers\VilageController::class, 'store'])->name('cms.vilages.store');
         Route::get('/edit/{id}', [App\Http\Controllers\VilageController::class, 'edit'])->name('cms.vilages.edit');
         Route::put('/update/{id}', [App\Http\Controllers\VilageController::class, 'update'])->name('cms.vilages.update');
+
+        Route::post('/select2-dropdown', [App\Http\Controllers\VilageController::class, 'select2_dropdown'])->name('cms.vilages.select2.dropdown');
     });
 
     Route::prefix('masjid')->group(function () {
