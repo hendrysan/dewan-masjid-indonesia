@@ -159,7 +159,7 @@
                         <span class="menu-header-text">Informasi</span>
                     </li>
                     <li class="menu-item">
-                        <a href="#" class="menu-link">
+                        <a href="{{route('cms.masjids')}}" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-checkbox"></i>
                             <div data-i18n="Masjid">Masjid</div>
                         </a>

@@ -66,6 +66,16 @@ Route::prefix('cms')->group(function () {
         Route::put('/update/{id}', [App\Http\Controllers\VilageController::class, 'update'])->name('cms.vilages.update');
     });
 
+    Route::prefix('masjid')->group(function () {
+        Route::get('/', [App\Http\Controllers\MasjidController::class, 'index'])->name('cms.masjids');
+        Route::get('/create', [App\Http\Controllers\MasjidController::class, 'create'])->name('cms.masjids.create');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\MasjidController::class, 'destroy'])->name('cms.masjids.destroy');
+
+        Route::post('/store', [App\Http\Controllers\MasjidController::class, 'store'])->name('cms.masjids.store');
+        Route::get('/edit/{id}', [App\Http\Controllers\MasjidController::class, 'edit'])->name('cms.masjids.edit');
+        Route::put('/update/{id}', [App\Http\Controllers\MasjidController::class, 'update'])->name('cms.masjids.update');
+    });
+
     Route::prefix('dropdown')->group(function () {
         Route::post('/subdistrict', [App\Http\Controllers\VilageController::class, 'json_request'])->name('cms.vilages.json');
     });
