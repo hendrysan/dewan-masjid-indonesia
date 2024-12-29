@@ -37,7 +37,8 @@
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/animate-css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/typeahead-js/typeahead.css') }}" />
-    {{-- <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/quill/katex.css') }}" />
+    {{--
+    <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/quill/katex.css') }}" />
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/quill/editor.css') }}" /> --}}
 
     <link rel="stylesheet" href="{{ asset('/cms-assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
@@ -119,50 +120,44 @@
                         </a>
                     </li>
 
+                @if(auth()->user()->role_id == 1)
+                        <li class="menu-header small text-uppercase">
+                            <span class="menu-header-text">Master Data</span>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{route('cms.users')}}" class="menu-link">
+                                <i class="menu-icon tf-icons ti ti-users"></i>
+                                <div data-i18n="Users">User</div>
+                            </a>
+                        </li>
+
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                                <i class="menu-icon tf-icons ti ti-map"></i>
+                                <div>Wilayah</div>
+                            </a>
+                            <ul class="menu-sub">
+                                <li class="menu-item">
+                                    <a href="{{route('cms.subdistricts')}}" class="menu-link">
+
+                                        <div data-i18n="Kecamatan">Master Kecamatan</div>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="{{route('cms.vilages')}}" class="menu-link">
+
+                                        <div data-i18n="Desa">Master Desa</div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    @endif
+
                     <li class="menu-header small text-uppercase">
-                        <span class="menu-header-text">Master Data</span>
+                        <span class="menu-header-text">Informasi</span>
                     </li>
-                    <li class="menu-item">
-                        <a href="{{route('cms.users')}}" class="menu-link">
-                            <i class="menu-icon tf-icons ti ti-users"></i>
-                            <div data-i18n="Users">User</div>
-                        </a>
-                    </li>
-
-                    <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons ti ti-map"></i>
-                            <div>Wilayah</div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="{{route('cms.subdistricts')}}" class="menu-link">
-
-                                    <div data-i18n="Kecamatan">Master Kecamatan</div>
-                                </a>
-                            </li>
-
-                            <li class="menu-item">
-                                <a href="{{route('cms.vilages')}}" class="menu-link">
-
-                                    <div data-i18n="Desa">Master Desa</div>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-
-
-
-                    {{-- <li class="menu-item">
-                        <a href="{{route('cms.roles')}}" class="menu-link">
-                            <i class="menu-icon tf-icons ti ti-users"></i>
-                            <div data-i18n="Role">Role</div>
-                        </a>
-                    </li> --}}
-
-
-
                     <li class="menu-item">
                         <a href="#" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-checkbox"></i>
@@ -170,12 +165,12 @@
                         </a>
                     </li>
 
-                    <li class="menu-item">
+                    {{-- <li class="menu-item">
                         <a href="#" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-checkbox"></i>
                             <div data-i18n="Musholah">Musholah</div>
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li class="menu-item">
                         <a href="#" class="menu-link">
