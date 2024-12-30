@@ -42,7 +42,7 @@
                                     <option value=""> -- Pilih --</option>
                                     @foreach ($vilages as $item)
                                     <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
-                                        '' }}> {{ $item->name }} ({{ $item->subdistrict->name }}) </option>
+                                        '' }}> Desa {{ $item->name }} Kecamatan {{ $item->subdistrict->name }} </option>
                                     @endforeach
                                 </select>
                                 <div class="valid-feedback"></div>
