@@ -743,35 +743,6 @@
         </div>
     </div>
 
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
-
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-    <div class="drag-target"></div>
-
-    <!--/ Layout wrapper -->
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-
-    <script src="../../cms-assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../../cms-assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../cms-assets/vendor/js/bootstrap.js"></script>
-    <script src="../../cms-assets/vendor/libs/node-waves/node-waves.js"></script>
-    <script src="../../cms-assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../../cms-assets/vendor/libs/hammer/hammer.js"></script>
-    <script src="../../cms-assets/vendor/libs/i18n/i18n.js"></script>
-    <script src="../../cms-assets/vendor/libs/typeahead-js/typeahead.js"></script>
-    <script src="../../cms-assets/vendor/js/menu.js"></script>
-
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="../../cms-assets/js/main.js"></script>
-
-    <!-- Page JS -->
 </body>
 
 </html>

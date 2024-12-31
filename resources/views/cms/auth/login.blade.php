@@ -61,10 +61,10 @@
             <!-- /Left Text -->
             <div class="d-none d-lg-flex col-lg-7 p-0">
                 <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
-                    <img src="../../cms-assets/img/illustrations/auth-login-illustration-light.png"
+                    <img src="../../cms-assets/img/illustrations/Masjid Al Azhom.png"
                         alt="auth-login-cover" class="img-fluid my-5 auth-illustration"
-                        data-app-light-img="illustrations/auth-login-illustration-light.png"
-                        data-app-dark-img="illustrations/auth-login-illustration-dark.png" />
+                        data-app-light-img="illustrations/Masjid Al Azhom.png"
+                        data-app-dark-img="illustrations/Masjid Al Azhom.png" />
 
                     <img src="../../cms-assets/img/illustrations/bg-shape-image-light.png" alt="auth-login-cover"
                         class="platform-bg" data-app-light-img="illustrations/bg-shape-image-light.png"
@@ -157,19 +157,6 @@
                         <div class="divider-text">or</div>
                     </div>
 
-                    <div class="d-flex justify-content-center my-4">
-                        <a href="javascript:;" class="btn btn-icon btn-label-facebook me-3">
-                            <i class="tf-icons fa-brands fa-facebook-f fs-5"></i>
-                        </a>
-
-                        <a href="javascript:;" class="btn btn-icon btn-label-google-plus me-3">
-                            <i class="tf-icons fa-brands fa-google fs-5"></i>
-                        </a>
-
-                        <a href="javascript:;" class="btn btn-icon btn-label-twitter">
-                            <i class="tf-icons fa-brands fa-twitter fs-5"></i>
-                        </a>
-                    </div>
                     <p class="text-center">
                         <span>Back to </span>
                         <a href="{{ route('homepage') }}">
