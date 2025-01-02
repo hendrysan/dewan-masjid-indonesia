@@ -28,10 +28,10 @@
 
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Masjid</label> <span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="name" name="name"
+                                <input type="text" class="form-control" id="nama" name="nama"
                                     value="{{ $masjid->nama }}" required>
                                 <div class="valid-feedback"></div>
-                                <div class="invalid-feedback">Please enter your name.</div>
+                                <div class="invalid-feedback">Please enter your nama.</div>
                             </div>
 
                             <div class="float-end mt-3">

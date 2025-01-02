@@ -53,7 +53,9 @@ class MasjidController extends Controller
     public function create()
     {
         $vilages = Vilage::all();
-        return view('cms.masjid.create',compact('vilages'));
+
+        // dd($vilages);
+        return view('cms.masjid.create', compact('vilages'));
     }
 
     /**
@@ -61,14 +63,24 @@ class MasjidController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
+        // dd('test masuk controller dari submit form');
 
-        $subdistrict = new Masjid();
-        $subdistrict->name = Str::title($request->name);
-        $subdistrict->save();
+        // dd($request);
+        // $request->validate([
+        //     'nama' => 'required|string|max:255',
+        // ]);
+
+        $vilage = Vilage::find($request->vilage_id);
+        // dd($vilage);
+
+
+        $masjid = new Masjid();
+        $masjid->nama = Str::title($request->nama);
+        $masjid->alamat = $request->alamat;
+        $masjid->subdistrict_id = $vilage->subdistrict_id;
+        $masjid->vilage_id = $request->vilage_id;
+        $masjid->save();
+
         alert()->success('success', 'Masjid berhasil di tambahkan');
 
         return redirect()->route('cms.masjids');
@@ -103,14 +115,18 @@ class MasjidController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request);
         $masjid = Masjid::find($id);
 
         if (!$masjid) {
             alert()->error('error', 'Masjid tidak di temukan');
             return redirect()->route('cms.masjid.edit', ['id' => $id]);
         }
-        $masjid->name = Str::title($request->name);
+
+        $masjid->nama = Str::title($request->nama);
         $masjid->save();
+
+
         alert()->success('success', 'Masjid berhasil di ubah');
         return redirect()->route('cms.masjids');
     }
@@ -121,14 +137,14 @@ class MasjidController extends Controller
     public function destroy(string $id)
     {
         //
-        $subdistrict = Masjid::find($id);
+        $masjid = Masjid::find($id);
 
-        if (!$subdistrict) {
+        if (!$masjid) {
             alert()->error('error', 'Masjid tidak di temukan');
             return redirect()->route('cms.masjids');
         }
 
-        $subdistrict->delete();
+        $masjid->delete();
 
         alert()->success('success', 'Masjid berhasil di hapus');
         return response()->json(['success' => 'Masjid berhasil di hapus']);

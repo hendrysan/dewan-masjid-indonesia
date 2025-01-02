@@ -24,7 +24,9 @@
                     <div class="mb-3">
                         <form action="{{ route('cms.masjids.store') }}" method="POST" class="needs-validation"
                             novalidate>
+
                             @csrf
+
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Masjid</label> <span
                                     class="text-danger">*</span>
@@ -38,7 +40,7 @@
                                 <label for="name" class="form-label">Pilih Desa</label> <span
                                     class="text-danger">*</span>
                                 <select class="select2 form-select" data-style="btn-default" data-live-search="true"
-                                    id="subdistrict_id" name="subdistrict_id" required>
+                                    id="vilage_id" name="vilage_id" required>
                                     <option value=""> -- Pilih --</option>
                                     @foreach ($vilages as $item)
                                     <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
@@ -49,6 +51,13 @@
                                 <div class="invalid-feedback">Please enter your desa.</div>
                             </div>
 
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Alamat</label> <span
+                                    class="text-danger">*</span>
+                                    <textarea class="form-control" id="alamat" name="alamat" required></textarea>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Please enter your alamat.</div>
+                            </div>
 
                             <div class="float-end mt-3">
                                 <a href="{{ route('cms.masjids') }}" class="btn btn-link">Batal</a>
@@ -69,33 +78,33 @@
 <script src="{{ asset('/cms-assets/vendor/libs/select2/select2.js') }}"></script>
 <script>
     $(document).ready(function() {
-        $('#subdistrict_id').select2();
+        $('#vilage_id').select2();
 
-        $('#subdistrict_id').change(function(){
-            $('#vilage_id').prop('disabled',false);
-            // const _body = {
-            //     "_token": "{{ csrf_token() }}",
-            //     subdistrict_id = $(this).val();
-            // }
-            var _url = "{{route('cms.vilages.select2.dropdown')}}";
-            $('#vilage_id').select2({
-                ajax: {
-                    url: _url,
-                    type: 'POST',
-                    dataType: 'json',
-                    // data: {
-                    //     "_token": "{{ csrf_token() }}",
-                    //     subdistrict_id = $(this).val();
-                    // },
-                    processResults: function (data) {
-                    // Transforms the top-level key of the response object from 'items' to 'results'
-                    return {
-                        results: data
-                    };
-                    }
-                }
-            });
-        });
+        // $('#vilage_id').change(function(){
+        //     $('#vilage_id').prop('disabled',false);
+        //     // const _body = {
+        //     //     "_token": "{{ csrf_token() }}",
+        //     //     subdistrict_id = $(this).val();
+        //     // }
+        //     var _url = "{{route('cms.vilages.select2.dropdown')}}";
+        //     $('#vilage_id').select2({
+        //         ajax: {
+        //             url: _url,
+        //             type: 'POST',
+        //             dataType: 'json',
+        //             // data: {
+        //             //     "_token": "{{ csrf_token() }}",
+        //             //     subdistrict_id = $(this).val();
+        //             // },
+        //             processResults: function (data) {
+        //             // Transforms the top-level key of the response object from 'items' to 'results'
+        //             return {
+        //                 results: data
+        //             };
+        //             }
+        //         }
+        //     });
+        // });
 
 
     });

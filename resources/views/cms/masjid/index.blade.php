@@ -81,8 +81,8 @@
                         searchable: false
                     },
                     {
-                        data: 'name',
-                        name: 'name'
+                        data: 'nama',
+                        name: 'nama'
                     },
                     {
                         data: 'alamat',
