@@ -41,8 +41,8 @@ class UserController extends Controller
         }
         $total_user = User::count();
         $total_administrator = User::where('role_id', '=', 1)->count();
-        $total_verifikator = User::where('role_id', '=', 2)->count();;
-        $total_operator = User::where('role_id', '=', 3)->count();;
+        $total_verifikator = User::where('role_id', '=', 2)->count();
+        $total_operator = User::where('role_id', '=', 3)->count();
         return view('cms.user.index', compact('total_user', 'total_administrator', 'total_verifikator', 'total_operator'));
     }
 
