@@ -23,17 +23,17 @@
 <!-- Content -->
 
 <div class="container-fluid flex-grow-1 container-p-y">
-
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Masjid </span> </h4>
     <!-- Users List Table -->
     <div class="card">
         <div class="card-header border-bottom">
 
             <div class="row ">
-                <div class="col-md-3">
+                <div class="col-3">
                     <input type="text" id="searchbox" class="form-control" placeholder="&#xF002; Search"
                         style="font-family:Arial, FontAwesome">
                 </div>
-                <div class="col-md-9 text-end">
+                <div class="col-9 text-end">
 
                     <a href="{{ route('cms.masjids.create') }}" class="btn btn-primary">
                         <span class="fas fa-plus"></span> &nbsp;
