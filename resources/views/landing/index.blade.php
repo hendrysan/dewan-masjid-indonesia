@@ -1063,7 +1063,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="footer-copyright">
-                        <p>&copy; 2017 Datlum | All Rights Reserved.</p>
+                        <p>&copy; 2025 Dewan Masjid Indonesia | Kabupaten Tangerang.</p>
                     </div>
                 </div>
             </div>
