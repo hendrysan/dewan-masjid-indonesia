@@ -170,13 +170,14 @@
         <div class="container">
             <!-- Section Title -->
             <div class="section-title">
-                <h3>Visi dan Misi</h3>
-                <div>Visi
+                {{-- <h3>Visi</h3> --}}
+                <div>
+                    <h3>Visi</h3>
                     <br />
                     Meningkatkan peran DMI dalam memberdayakan masjid untuk kesejahteraan masyarakat Kabupaten
                     Tangerang.
                     <br /><br />
-                    Misi
+                    <h3>Misi</h3>
                     <br />
                     Konsolidasi organisasi mewujudkan program pokok dan program unggulan DMI Kabupaten Tangerang.
                     <br />
@@ -318,7 +319,8 @@
                                             <li class="list-group-item">Bupati Tangerang</li>
                                             <li class="list-group-item">Wakil Bupati Tangerang</li>
                                             <li class="list-group-item">Ketua DPRD Kabupaten Tangerang</li>
-                                            <li class="list-group-item">Kepala Kantor Kementerian Agama Kabupaten Tangerang</li>
+                                            <li class="list-group-item">Kepala Kantor Kementerian Agama Kabupaten
+                                                Tangerang</li>
                                             <li class="list-group-item">Ketua MUI Kabupaten Tangerang</li>
                                         </ul>
 
@@ -358,13 +360,15 @@
                                             <li class="list-group-item">Drs. H. Soma Atmaja, M.Si</li>
                                             <li class="list-group-item">Muhamad Hidayat, S.E., M.M</li>
                                             <li class="list-group-item">Ir. H. Taufik Emil</li>
-                                            <li class="list-group-item">H. Erwan Soepardi<span class="badge">Sekretaris Umum</span></li>
+                                            <li class="list-group-item">H. Erwan Soepardi<span class="badge">Sekretaris
+                                                    Umum</span></li>
                                             <li class="list-group-item">H. Ahmad Uwes Al-Qurni, S.Ag., M.Si</li>
                                             <li class="list-group-item">H. Abdullah Hasyim, S.HI</li>
                                             <li class="list-group-item">M. Isep Nurhamid, S.Pi</li>
                                             <li class="list-group-item">Ade Syanti Widiyanti, S.Pd</li>
                                             <li class="list-group-item">Lailatul Badriyah, S.Pd.I</li>
-                                            <li class="list-group-item">H. Abu Ani, S.Ag<span class="badge">Bendahara Umum</span></li>
+                                            <li class="list-group-item">H. Abu Ani, S.Ag<span class="badge">Bendahara
+                                                    Umum</span></li>
                                             <li class="list-group-item">Drs. H. Waluyo Sejati</li>
                                             <li class="list-group-item">Hj. Daiz Nurafirilia, S.E</li>
                                             <li class="list-group-item">Dwi Erawati, S.T</li>
@@ -372,7 +376,8 @@
 
                                         <h3>Bidang Pemberdayaan Organisasi dan Pembinaan Kedaerahan</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Iskandar Nordat, M.M<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Iskandar Nordat, M.M<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">H. Musthofa</li>
                                             <li class="list-group-item">Drs. H. Yulinar Firdaus, M.Si</li>
                                             <li class="list-group-item">H. Budianto, S.IP. M.Si</li>
@@ -382,7 +387,8 @@
 
                                         <h3>Bidang Peribadatan dan Hukum</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Drs. H. Rohimin<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Drs. H. Rohimin<span class="badge">Ketua</span>
+                                            </li>
                                             <li class="list-group-item">Desyanti, S.H., M.H</li>
                                             <li class="list-group-item">Drs. H. Ahmadi, M.Sy</li>
                                             <li class="list-group-item">H. M. Syarifudin, S.H</li>
@@ -392,7 +398,8 @@
 
                                         <h3>Bidang Zakat, Infaq, Shadaqah, Hibah, dan Wakaf</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Drs. Muhamad Supi<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Drs. Muhamad Supi<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">Muhamad Suhoyo</li>
                                             <li class="list-group-item">Nunung Kusnadi, S.E</li>
                                             <li class="list-group-item">Madsuro</li>
@@ -403,7 +410,8 @@
 
                                         <h3>Bidang Dakwah, Ukhuwah dan Sumber Daya Keumatan</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Hj. Aida Albaroyah, S.Ag., M.Si<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Hj. Aida Albaroyah, S.Ag., M.Si<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">H. Saepudin, S.Pd.I., M.M</li>
                                             <li class="list-group-item">M. Abdurrohman, S.Sos</li>
                                             <li class="list-group-item">Ust. H. Ahmad Yusuf</li>
@@ -425,7 +433,8 @@
 
                                         <h3>Bidang Pemberdayaan Ekonomi dan Kewirausahaan</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Hj. Khaeroyaroh, S.Ag., M.Pd<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Hj. Khaeroyaroh, S.Ag., M.Pd<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">H. Rukman, S.E., M.M</li>
                                             <li class="list-group-item">H. Jamasari, S.Pd.I, M.Si</li>
                                             <li class="list-group-item">H. Ahmad Rifaudin, S.Ag., M.Pd</li>
@@ -433,9 +442,11 @@
                                             <li class="list-group-item">M. Rifqi</li>
                                         </ul>
 
-                                        <h3>Bidang Pemberdayaan Potensi Muslimah dan Pembinaan Keluarga (PPMK) dan PAUD</h3>
+                                        <h3>Bidang Pemberdayaan Potensi Muslimah dan Pembinaan Keluarga (PPMK) dan PAUD
+                                        </h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Hj. Rohmania Ues<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Hj. Rohmania Ues<span class="badge">Ketua</span>
+                                            </li>
                                             <li class="list-group-item">DR. Yekti Wulandari</li>
                                             <li class="list-group-item">Hj. Yeni Mulyani</li>
                                             <li class="list-group-item">Ust. Hartono</li>
@@ -445,7 +456,8 @@
 
                                         <h3>Bidang Kesehatan dan Sanitasi</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Ahmad Suryadi<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Ahmad Suryadi<span class="badge">Ketua</span>
+                                            </li>
                                             <li class="list-group-item">Erwin Mawandy, S.T., M.Si</li>
                                             <li class="list-group-item">drg. Eko Hartati</li>
                                             <li class="list-group-item">dr. Sulastri</li>
@@ -453,9 +465,11 @@
                                             <li class="list-group-item">Budi Khumaedi, S.KM., M.M</li>
                                         </ul>
 
-                                        <h3>Bidang Sosial Kemanusiaan dan Penanggulangan Bencana dan Pos Tanggap Bencana (Postaben) Daerah  </h3>
+                                        <h3>Bidang Sosial Kemanusiaan dan Penanggulangan Bencana dan Pos Tanggap Bencana
+                                            (Postaben) Daerah </h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Siti Rahma, S.Pd<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Siti Rahma, S.Pd<span class="badge">Ketua</span>
+                                            </li>
                                             <li class="list-group-item">Drs. H. Agus Suryana, M.Si</li>
                                             <li class="list-group-item">Ending Supriyadi, S.Sos</li>
                                             <li class="list-group-item">M. Ikhwan Kamil Marfu, M.Si</li>
@@ -465,7 +479,8 @@
 
                                         <h3>Bidang Hubungan Antar Lembaga dan Hubungan Masyarakat</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">Hj. Fetty Ratu Permata, S.P., M.P<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Hj. Fetty Ratu Permata, S.P., M.P<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">Angga Yuliantono, S.IP</li>
                                             <li class="list-group-item">Edy Supriyatna, S.Kom., M.Si</li>
                                             <li class="list-group-item">Rini Fazriah, S.H</li>
@@ -475,7 +490,8 @@
 
                                         <h3>Bidang Kaderisasi Pemuda dan Remaja Masjid</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">H. Baehaki, S.E., M.P<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Baehaki, S.E., M.P<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">H. Said Hudri, S.Pd.I</li>
                                             <li class="list-group-item">Drs. H. Endang Samlawi, M.Si</li>
                                             <li class="list-group-item">M. Zakaria Ansori</li>
@@ -486,7 +502,8 @@
 
                                         <h3>Bidang Pendidikan, Intek, dan Kebudayaan</h3>
                                         <ul class="list-group">
-                                            <li class="list-group-item">H. Supriyadi, S.E., M.M<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Supriyadi, S.E., M.M<span
+                                                    class="badge">Ketua</span></li>
                                             <li class="list-group-item">Abdul Qadir, S.T., M.Si</li>
                                             <li class="list-group-item">H. Turhaerudin</li>
                                             <li class="list-group-item">KH. Baiquni Yasin</li>
