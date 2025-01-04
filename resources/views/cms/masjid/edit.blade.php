@@ -31,9 +31,8 @@
                                 <input type="text" class="form-control" id="nama" name="nama"
                                     value="{{ $masjid->nama }}" required>
                                 <div class="valid-feedback"></div>
-                                <div class="invalid-feedback">Please enter your nama.</div>
-                            </div>
-
+                                <div class="invalid-feedback">Please enter your name.</div>
+                                
                             <div class="float-end mt-3">
                                 <a href="{{ route('cms.masjids') }}" class="btn btn-link">Batal</a>
                                 <button type="submit" class="btn btn-primary">Kirim</button>

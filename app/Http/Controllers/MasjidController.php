@@ -53,9 +53,7 @@ class MasjidController extends Controller
     public function create()
     {
         $vilages = Vilage::all();
-
-        // dd($vilages);
-        return view('cms.masjid.create', compact('vilages'));
+        return view('cms.masjid.create',compact('vilages'));
     }
 
     /**
@@ -63,20 +61,32 @@ class MasjidController extends Controller
      */
     public function store(Request $request)
     {
-        // dd('test masuk controller dari submit form');
 
-        // dd($request);
-        // $request->validate([
-        //     'nama' => 'required|string|max:255',
-        // ]);
-
+        $request->validate([
+        'nama' => 'required|string|max:255',
+        'imb' => 'required|in:yes,no',
+        'website_url' => 'required|url',
+        'map_url' => 'required|url',]);
+        
+        
         $vilage = Vilage::find($request->vilage_id);
-        // dd($vilage);
 
 
         $masjid = new Masjid();
         $masjid->nama = Str::title($request->nama);
         $masjid->alamat = $request->alamat;
+        $masjid->tahun_berdiri = $request->tahun_berdiri;
+        $masjid->status_tanah_bangunan = $request->status_tanah_bangunan;
+        $masjid->luas_bangunan = $request->luas_bangunan;
+        $masjid->luas_tanah = $request->luas_tanah;
+        $masjid->imb = $request->imb=== 'yes' ? 1 : 0;
+        $masjid->daya_tampung = $request->daya_tampung;
+        $masjid->fasilitas = $request->fasilitas;
+        $masjid->kegiatan = $request->kegiatan;
+        $masjid->nama_imam = $request->nama_imam;
+        $masjid->nama_khatib = $request->nama_khatib;
+        $masjid->website_url = $request->website_url;
+        $masjid->map_url = $request->map_url;
         $masjid->subdistrict_id = $vilage->subdistrict_id;
         $masjid->vilage_id = $request->vilage_id;
         $masjid->save();
@@ -100,14 +110,14 @@ class MasjidController extends Controller
      */
     public function edit($id)
     {
+        
         $masjid = Masjid::find($id);
-
         if (!$masjid) {
             alert()->error('error', 'Masjid tidak di temukan');
             return redirect()->route('cms.masjids');
         }
 
-        return view('cms.masjid.edit', compact('masjid'));
+        return view('cms.masjid.edit', compact('masjid' ));
     }
 
     /**
@@ -115,18 +125,16 @@ class MasjidController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd($request);
         $masjid = Masjid::find($id);
+        $request->validate([
+            'nama' => 'required|string|max:255',]);
 
         if (!$masjid) {
             alert()->error('error', 'Masjid tidak di temukan');
             return redirect()->route('cms.masjid.edit', ['id' => $id]);
         }
-
         $masjid->nama = Str::title($request->nama);
         $masjid->save();
-
-
         alert()->success('success', 'Masjid berhasil di ubah');
         return redirect()->route('cms.masjids');
     }
@@ -152,7 +160,7 @@ class MasjidController extends Controller
 
     public function json_request(Request $request)
     {
-        $subdistricts = Masjid::all();
-        return response()->json($subdistricts);
+        $masjid = Masjid::all();
+        return response()->json($masjid);
     }
 }

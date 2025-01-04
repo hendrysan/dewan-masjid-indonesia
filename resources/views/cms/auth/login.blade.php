@@ -60,15 +60,15 @@
         <div class="authentication-inner row">
             <!-- /Left Text -->
             <div class="d-none d-lg-flex col-lg-7 p-0">
-                <div class="auth-cover-bg d-flex justify-content-center align-items-center">
+                <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
                     <img src="../../cms-assets/img/illustrations/Masjid Al Azhom.png"
-                        alt="auth-login-cover" class="img-fluid "
+                        alt="auth-login-cover" class="img-fluid my-5 auth-illustration"
                         data-app-light-img="illustrations/Masjid Al Azhom.png"
                         data-app-dark-img="illustrations/Masjid Al Azhom.png" />
 
-                    {{-- <img src="../../cms-assets/img/illustrations/bg-shape-image-light.png" alt="auth-login-cover"
+                    <img src="../../cms-assets/img/illustrations/bg-shape-image-light.png" alt="auth-login-cover"
                         class="platform-bg" data-app-light-img="illustrations/bg-shape-image-light.png"
-                        data-app-dark-img="illustrations/bg-shape-image-dark.png" /> --}}
+                        data-app-dark-img="illustrations/bg-shape-image-dark.png" />
                 </div>
             </div>
             <!-- /Left Text -->

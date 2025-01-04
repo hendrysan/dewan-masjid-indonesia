@@ -21,29 +21,38 @@
                         <form action="{{ route('cms.vilages.store') }}" method="POST" class="needs-validation"
                             novalidate>
                             @csrf
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Nama Desa</label> <span
-                                    class="text-danger">*</span>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
-                                    required>
-                                <div class="valid-feedback"></div>
-                                <div class="invalid-feedback">Please enter your name.</div>
-                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama Desa</label> <span class="text-danger">*</span>
+                                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback">Please enter your name.</div>
+                                    </div>
 
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Pilih Kecamatan</label> <span
-                                    class="text-danger">*</span>
-                                <select class="select2 form-select" data-style="btn-default" data-live-search="true"
-                                    id="subdistrict_id" name="subdistrict_id" required>
-                                    <option value=""> -- Pilih --</option>
-                                    @foreach ($subdistricts as $item)
-                                    <option value="{{ $item->id }}" {{ ( $item->id == 0) ? 'selected' :
-                                        '' }}> {{ $item->name }} </option>
-                                    @endforeach
-                                </select>
-                                <div class="valid-feedback"></div>
-                                <div class="invalid-feedback">Please enter your kecamatan.</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                    <label for="name" class="form-label">Pilih Kecamatan</label> <span
+                                        class="text-danger">*</span>
+                                    <select class="select2 form-select" data-style="btn-default" data-live-search="true"
+                                        id="subdistrict_id" name="subdistrict_id" required>
+                                        <option value=""> -- Pilih --</option>
+                                        @foreach ($subdistricts as $item)
+                                        <option value="{{ $item->id }}" {{ ($item->id == 0) ? 'selected' : '' }}> {{ $item->name }} </option>
+                                        @endforeach
+                                    </select>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback">Please enter your kecamatan.</div>
+                                </div>
+
+                                </div>
+
+                                
+
+                           
                             </div>
+                            
 
                             <div class="float-end mt-3">
                                 <a href="{{ route('cms.vilages') }}" class="btn btn-link">Batal</a>
