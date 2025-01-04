@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="py-3 mb-4"><span class="text-muted fw-light">User </span> </h4>
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Profile </span> </h4>
 
     <div class="row">
         <!-- Autosize -->
