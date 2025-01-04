@@ -85,7 +85,8 @@
                 <!-- lOGO TEXT HERE -->
 
                 {{-- <a href="#" class="navbar-brand">DMI</a> --}}
-                <img src="{{ asset('/landingpage/images/dmi/header-dmi-glow-768x267.png')}}" class="iconcircle" style="max-width: 150px" />
+                <img src="{{ asset('/landingpage/images/dmi/header-dmi-glow-768x267.png')}}" class="iconcircle"
+                    style="max-width: 150px" />
             </div>
 
             <!-- NAVIGATION LINKS -->
@@ -302,7 +303,7 @@
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"
@@ -312,744 +313,195 @@
                             <div class="modal-body">
                                 <div class=" row">
                                     <div class="col-md-12">
-                                        <table class=" aligncenter">
-                                            <tbody align="center">
-                                                <tr>
-                                                    <td colspan="4"><strong>Pembina:</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1.</td>
-                                                    <td colspan="3">Bupati Tangerang</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2.</td>
-                                                    <td colspan="3">Wakil Bupati Tangerang</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3.</td>
-                                                    <td colspan="3">Ketua DPRD Kabupaten Tangerang</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4.</td>
-                                                    <td colspan="3">Kepala Kantor Kementerian Agama Kabupaten Tangerang
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5.</td>
-                                                    <td colspan="3">Ketua MUI Kabupaten Tangerang</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Majelis Mustasyhar dan Pakar:</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1.</td>
-                                                    <td colspan="3">Drs. H. Moch. Maesyal Rasyid, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2.</td>
-                                                    <td colspan="3">Ujat Sudrajat, S.Sos., M.T.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3.</td>
-                                                    <td colspan="3">Drs. H. Syaifullah, M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4.</td>
-                                                    <td colspan="3">dr. Hj. Desiriana Dinardianti, MARS.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5.</td>
-                                                    <td colspan="3">Ir. H. Jarnaji, M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6.</td>
-                                                    <td colspan="3">Drs. H. Ahdiyat Nuryasin, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7.</td>
-                                                    <td colspan="3">Drs. H. Firzada Mahali, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>8.</td>
-                                                    <td colspan="3">Drs. H. Achmad Taufik, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>9.</td>
-                                                    <td colspan="3">Dr. H. Aziz Gunawan, M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10.</td>
-                                                    <td colspan="3">Drs. H. Slamet Budi Mulyanto, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Majelis Ekonomi Syari&#8217;ah:</strong>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1.</td>
-                                                    <td colspan="3">Dr. H. Heri Heryanto, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2.</td>
-                                                    <td colspan="3">Drs. H. Arsyad Husein, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3.</td>
-                                                    <td colspan="3">Dr. H. Kamarudin Batubara, S.E., M.E.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4.</td>
-                                                    <td colspan="3">H. Luki Lukman Fauzi, S.Ag., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5.</td>
-                                                    <td colspan="3">Drs. H. Asep Maman Kurnia, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6.</td>
-                                                    <td colspan="3">Drs. H. Amat, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7.</td>
-                                                    <td colspan="3">Drs. H. Hariri</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>8.</td>
-                                                    <td colspan="3">Drs. H. Maski, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>9.</td>
-                                                    <td colspan="3">KH. Afif Afifi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10.</td>
-                                                    <td colspan="3">Drs. H. Musa Hidayat, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Pimpinan Harian:</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>KH. Sanwani</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Ketua</td>
-                                                    <td>:</td>
-                                                    <td>H. Ozi Syairoji, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Andi Sutisna, M.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Soma Atmaja, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Muhamad Hidayat, S.E., M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Ir. H. Taufik Emil</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Sekretaris Umum</td>
-                                                    <td>:</td>
-                                                    <td>H. Erwan Soepardi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Sekretaris</td>
-                                                    <td>:</td>
-                                                    <td>H. Ahmad Uwes Al-Qurni, S.Ag., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Sekretaris</td>
-                                                    <td>:</td>
-                                                    <td>H. Abdullah Hasyim, S.HI.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Sekretaris</td>
-                                                    <td>:</td>
-                                                    <td>M. Isep Nurhamid, S.Pi.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Sekretaris</td>
-                                                    <td>:</td>
-                                                    <td>Ade Syanti Widiyanti, S.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Sekretaris</td>
-                                                    <td>:</td>
-                                                    <td>Lailatul Badriyah, S.Pd.I.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Bendahara Umum</td>
-                                                    <td>:</td>
-                                                    <td>H. Abu Ani, S.Ag.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Bendahara</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Waluyo Sejati</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Bendahara</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Daiz Nurafirilia, S.E.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Wakil Bendahara</td>
-                                                    <td>:</td>
-                                                    <td>Dwi Erawati, S.T.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Pemberdayaan Organisasi dan Pembinaan
-                                                            Kedaerahan</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Iskandar Nordat, M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Musthofa</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Yulinar Firdaus, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Budianto, S.IP. M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Saeful Hufadz, S.Ag.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Munawir Hafidz, S.Pd.I.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Peribadatan dan Hukum</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Rohimin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Desyanti, S.H., M.H.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Ahmadi, M.Sy.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. M. Syarifudin, S.H.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Bahrul Ulum</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Nurhayati</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Zakat, Infaq, Shadaqah, Hibah, dan
-                                                            Wakaf</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Drs. Muhamad Supi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Muhamad Suhoyo</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Nunung Kusnadi, S.E.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Madsuro</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Mahadi, M.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Triyono, S.E.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ust. Aliyudin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Dakwah, Ukhuwah dan Sumber Daya
-                                                            Keumatan</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Aida Albaroyah, S.Ag., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Saepudin, S.Pd.I., M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Abdurrohman, S.Sos.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ust. H. Ahmad Yusuf</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Salim, S.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ust. Anis Fuad</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Sri Sulatipah</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Kominfo, Pengembangan Arsitektur dan
-                                                            Infrastruktur</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>H. Didin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Iskandar Ishak, S.Sos., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ir. H. Cucu Heri Rukmantara, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Deni Hermawan, M.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ust. KH. Ubaidillah, S.Ag.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Mulya Wiguna</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Sukmajaya</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Pemberdayaan Ekonomi dan
-                                                            Kewirausahaan</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Khaeroyaroh, S.Ag., M.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Rukman, S.E., M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Jamasari, S.Pd.I, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Ahmad Rifaudin, S.Ag., M.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Puryadi, S.Sos.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Rifqi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Pemberdayaan Potensi Muslimah dan
-                                                            Pembinaan Keluarga (PPMK) dan PAUD</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Rohmania Ues</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>DR. Yekti Wulandari</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Yeni Mulyani</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ust. Hartono</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Hidayah</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Eka Widiyanti, S.H.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Kesehatan dan Sanitasi</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Ahmad Suryadi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Erwin Mawandy, S.T., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>drg. Eko Hartati</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>dr. Sulastri</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>dr. Herlin Hidayati</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Budi Khumaedi, S.KM., M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong> Bidang Sosial Kemanusiaan dan
-                                                            Penanggulangan Bencana dan Pos Tanggap Bencana (Postaben)
-                                                            Daerah </strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Siti Rahma, S.Pd.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Agus Suryana, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ending Supriyadi, S.Sos.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Ikhwan Kamil Marfu, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Hari Wiyono, S.Kom.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Noval Hanan, S.Kom.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Hubungan Antar Lembaga dan Hubungan
-                                                            Masyarakat</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>Hj. Fetty Ratu Permata, S.P., M.P.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Angga Yuliantono, S.IP.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Edy Supriyatna, S.Kom., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Rini Fazriah, S.H.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ardin, S.Ag.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Ilman Hairi</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Yudi Prasetio</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Kaderisasi Pemuda dan Remaja
-                                                            Masjid</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>H. Baehaki, S.E., M.P.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Said Hudri, S.Pd.I.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Drs. H. Endang Samlawi, M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Zakaria Ansori</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Daud, S.Pd.I</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Joni Juhaeni</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>M. Nasrulloh</td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4"><strong>Bidang Pendidikan, Intek, dan
-                                                            Kebudayaan</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Ketua</td>
-                                                    <td>:</td>
-                                                    <td>H. Supriyadi, S.E., M.M.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Abdul Qadir, S.T., M.Si.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>H. Turhaerudin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>KH. Baiquni Yasin</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Zaenudin, S.Kom.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">Anggota</td>
-                                                    <td>:</td>
-                                                    <td>Syamsoe Astra Negara, M.M.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <h3>Pembina</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Bupati Tangerang</li>
+                                            <li class="list-group-item">Wakil Bupati Tangerang</li>
+                                            <li class="list-group-item">Ketua DPRD Kabupaten Tangerang</li>
+                                            <li class="list-group-item">Kepala Kantor Kementerian Agama Kabupaten Tangerang</li>
+                                            <li class="list-group-item">Ketua MUI Kabupaten Tangerang</li>
+                                        </ul>
+
+                                        <h3>Majelis Mustasyhar dan Pakar</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Drs. H. Moch. Maesyal Rasyid, M.Si</li>
+                                            <li class="list-group-item">Ujat Sudrajat, S.Sos., M.T</li>
+                                            <li class="list-group-item">Drs. H. Syaifullah, M.M</li>
+                                            <li class="list-group-item">dr. Hj. Desiriana Dinardianti, MARS</li>
+                                            <li class="list-group-item">Ir. H. Jarnaji, M.M</li>
+                                            <li class="list-group-item">Drs. H. Ahdiyat Nuryasin, M.Si</li>
+                                            <li class="list-group-item">Drs. H. Firzada Mahali, M.Si</li>
+                                            <li class="list-group-item">Drs. H. Achmad Taufik, M.Si</li>
+                                            <li class="list-group-item">Dr. H. Aziz Gunawan, M.M</li>
+                                            <li class="list-group-item">Drs. H. Slamet Budi Mulyanto, M.Si</li>
+                                        </ul>
+
+                                        <h3>Majelis Ekonomi Syari’ah</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Dr. H. Heri Heryanto, M.Si</li>
+                                            <li class="list-group-item">Drs. H. Arsyad Husein, M.Si</li>
+                                            <li class="list-group-item">Dr. H. Kamarudin Batubara, S.E., M.E</li>
+                                            <li class="list-group-item">H. Luki Lukman Fauzi, S.Ag., M.Si</li>
+                                            <li class="list-group-item">Drs. H. Asep Maman Kurnia, M.Si</li>
+                                            <li class="list-group-item">Drs. H. Amat, M.Si</li>
+                                            <li class="list-group-item">Drs. H. Hariri</li>
+                                            <li class="list-group-item">Drs. H. Maski, M.Si</li>
+                                            <li class="list-group-item">KH. Afif Afifi</li>
+                                            <li class="list-group-item">Drs. H. Musa Hidayat, M.Si</li>
+                                        </ul>
+
+                                        <h3>Pimpinan Harian</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">KH. Sanwani<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Ozi Syairoji, M.Si</li>
+                                            <li class="list-group-item">Andi Sutisna, M.Pd</li>
+                                            <li class="list-group-item">Drs. H. Soma Atmaja, M.Si</li>
+                                            <li class="list-group-item">Muhamad Hidayat, S.E., M.M</li>
+                                            <li class="list-group-item">Ir. H. Taufik Emil</li>
+                                            <li class="list-group-item">H. Erwan Soepardi<span class="badge">Sekretaris Umum</span></li>
+                                            <li class="list-group-item">H. Ahmad Uwes Al-Qurni, S.Ag., M.Si</li>
+                                            <li class="list-group-item">H. Abdullah Hasyim, S.HI</li>
+                                            <li class="list-group-item">M. Isep Nurhamid, S.Pi</li>
+                                            <li class="list-group-item">Ade Syanti Widiyanti, S.Pd</li>
+                                            <li class="list-group-item">Lailatul Badriyah, S.Pd.I</li>
+                                            <li class="list-group-item">H. Abu Ani, S.Ag<span class="badge">Bendahara Umum</span></li>
+                                            <li class="list-group-item">Drs. H. Waluyo Sejati</li>
+                                            <li class="list-group-item">Hj. Daiz Nurafirilia, S.E</li>
+                                            <li class="list-group-item">Dwi Erawati, S.T</li>
+                                        </ul>
+
+                                        <h3>Bidang Pemberdayaan Organisasi dan Pembinaan Kedaerahan</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Iskandar Nordat, M.M<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Musthofa</li>
+                                            <li class="list-group-item">Drs. H. Yulinar Firdaus, M.Si</li>
+                                            <li class="list-group-item">H. Budianto, S.IP. M.Si</li>
+                                            <li class="list-group-item">H. Saeful Hufadz, S.Ag</li>
+                                            <li class="list-group-item">Munawir Hafidz, S.Pd.I</li>
+                                        </ul>
+
+                                        <h3>Bidang Peribadatan dan Hukum</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Drs. H. Rohimin<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Desyanti, S.H., M.H</li>
+                                            <li class="list-group-item">Drs. H. Ahmadi, M.Sy</li>
+                                            <li class="list-group-item">H. M. Syarifudin, S.H</li>
+                                            <li class="list-group-item">Bahrul Ulum</li>
+                                            <li class="list-group-item">Nurhayati</li>
+                                        </ul>
+
+                                        <h3>Bidang Zakat, Infaq, Shadaqah, Hibah, dan Wakaf</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Drs. Muhamad Supi<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Muhamad Suhoyo</li>
+                                            <li class="list-group-item">Nunung Kusnadi, S.E</li>
+                                            <li class="list-group-item">Madsuro</li>
+                                            <li class="list-group-item">Mahadi, M.Pd</li>
+                                            <li class="list-group-item">Triyono, S.E</li>
+                                            <li class="list-group-item">Ust. Aliyudin</li>
+                                        </ul>
+
+                                        <h3>Bidang Dakwah, Ukhuwah dan Sumber Daya Keumatan</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Hj. Aida Albaroyah, S.Ag., M.Si<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Saepudin, S.Pd.I., M.M</li>
+                                            <li class="list-group-item">M. Abdurrohman, S.Sos</li>
+                                            <li class="list-group-item">Ust. H. Ahmad Yusuf</li>
+                                            <li class="list-group-item">M. Salim, S.Pd</li>
+                                            <li class="list-group-item">Ust. Anis Fuad</li>
+                                            <li class="list-group-item">Sri Sulatipah</li>
+                                        </ul>
+
+                                        <h3>Bidang Kominfo, Pengembangan Arsitektur dan Infrastruktur</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">H. Didin<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Iskandar Ishak, S.Sos., M.Si</li>
+                                            <li class="list-group-item">Ir. H. Cucu Heri Rukmantara, M.Si</li>
+                                            <li class="list-group-item">Drs. H. Deni Hermawan, M.Pd</li>
+                                            <li class="list-group-item">Ust. KH. Ubaidillah, S.Ag</li>
+                                            <li class="list-group-item">Mulya Wiguna</li>
+                                            <li class="list-group-item">Sukmajaya</li>
+                                        </ul>
+
+                                        <h3>Bidang Pemberdayaan Ekonomi dan Kewirausahaan</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Hj. Khaeroyaroh, S.Ag., M.Pd<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Rukman, S.E., M.M</li>
+                                            <li class="list-group-item">H. Jamasari, S.Pd.I, M.Si</li>
+                                            <li class="list-group-item">H. Ahmad Rifaudin, S.Ag., M.Pd</li>
+                                            <li class="list-group-item">H. Puryadi, S.Sos</li>
+                                            <li class="list-group-item">M. Rifqi</li>
+                                        </ul>
+
+                                        <h3>Bidang Pemberdayaan Potensi Muslimah dan Pembinaan Keluarga (PPMK) dan PAUD</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Hj. Rohmania Ues<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">DR. Yekti Wulandari</li>
+                                            <li class="list-group-item">Hj. Yeni Mulyani</li>
+                                            <li class="list-group-item">Ust. Hartono</li>
+                                            <li class="list-group-item">Hj. Hidayah</li>
+                                            <li class="list-group-item">Hj. Eka Widiyanti, S.H</li>
+                                        </ul>
+
+                                        <h3>Bidang Kesehatan dan Sanitasi</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Ahmad Suryadi<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Erwin Mawandy, S.T., M.Si</li>
+                                            <li class="list-group-item">drg. Eko Hartati</li>
+                                            <li class="list-group-item">dr. Sulastri</li>
+                                            <li class="list-group-item">dr. Herlin Hidayati</li>
+                                            <li class="list-group-item">Budi Khumaedi, S.KM., M.M</li>
+                                        </ul>
+
+                                        <h3>Bidang Sosial Kemanusiaan dan Penanggulangan Bencana dan Pos Tanggap Bencana (Postaben) Daerah  </h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Siti Rahma, S.Pd<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Drs. H. Agus Suryana, M.Si</li>
+                                            <li class="list-group-item">Ending Supriyadi, S.Sos</li>
+                                            <li class="list-group-item">M. Ikhwan Kamil Marfu, M.Si</li>
+                                            <li class="list-group-item">H. Hari Wiyono, S.Kom</li>
+                                            <li class="list-group-item">Noval Hanan, S.Kom</li>
+                                        </ul>
+
+                                        <h3>Bidang Hubungan Antar Lembaga dan Hubungan Masyarakat</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Hj. Fetty Ratu Permata, S.P., M.P<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Angga Yuliantono, S.IP</li>
+                                            <li class="list-group-item">Edy Supriyatna, S.Kom., M.Si</li>
+                                            <li class="list-group-item">Rini Fazriah, S.H</li>
+                                            <li class="list-group-item">Ardin, S.Ag</li>
+                                            <li class="list-group-item">Yudi Prasetio</li>
+                                        </ul>
+
+                                        <h3>Bidang Kaderisasi Pemuda dan Remaja Masjid</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">H. Baehaki, S.E., M.P<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">H. Said Hudri, S.Pd.I</li>
+                                            <li class="list-group-item">Drs. H. Endang Samlawi, M.Si</li>
+                                            <li class="list-group-item">M. Zakaria Ansori</li>
+                                            <li class="list-group-item">M. Daud, S.Pd.I</li>
+                                            <li class="list-group-item">Joni Juhaeni</li>
+                                            <li class="list-group-item">M. Nasrulloh</li>
+                                        </ul>
+
+                                        <h3>Bidang Pendidikan, Intek, dan Kebudayaan</h3>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">H. Supriyadi, S.E., M.M<span class="badge">Ketua</span></li>
+                                            <li class="list-group-item">Abdul Qadir, S.T., M.Si</li>
+                                            <li class="list-group-item">H. Turhaerudin</li>
+                                            <li class="list-group-item">KH. Baiquni Yasin</li>
+                                            <li class="list-group-item">Zaenudin, S.Kom</li>
+                                            <li class="list-group-item">Syamsoe Astra Negara, M.M</li>
+                                        </ul>
+
+
+
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
                             </div>
                         </div>
                         <!-- /.modal-content -->
